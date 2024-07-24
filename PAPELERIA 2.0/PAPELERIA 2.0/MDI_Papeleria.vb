@@ -2,94 +2,34 @@
 
 Public Class MDI_Papeleria
 
-    Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
-        '' Cree una nueva instancia del formulario secundario.
-        'Dim ChildForm As New System.Windows.Forms.Form
-        '' Conviértalo en un elemento secundario de este formulario MDI antes de mostrarlo.
-        'ChildForm.MdiParent = Me
-
-        'm_ChildFormNumber += 1
-        'ChildForm.Text = "Ventana " & m_ChildFormNumber
-
-        'ChildForm.Show()
-
-    End Sub
-
-    Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click
-        Dim OpenFileDialog As New OpenFileDialog
-        OpenFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
-        OpenFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*"
-        If (OpenFileDialog.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK) Then
-            Dim FileName As String = OpenFileDialog.FileName
-            ' TODO: agregue código aquí para abrir el archivo.
-        End If
-    End Sub
-
-    Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SaveAsToolStripMenuItem.Click
-        Dim SaveFileDialog As New SaveFileDialog
-        SaveFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
-        SaveFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*"
-
-        If (SaveFileDialog.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK) Then
-            Dim FileName As String = SaveFileDialog.FileName
-            ' TODO: agregue código aquí para guardar el contenido actual del formulario en un archivo.
-        End If
-    End Sub
-
-
-    Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click
-        Me.Close()
-    End Sub
-
-    Private Sub CutToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CutToolStripMenuItem.Click
-        ' Utilice My.Computer.Clipboard para insertar el texto o las imágenes seleccionadas en el Portapapeles
-    End Sub
-
-    Private Sub CopyToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CopyToolStripMenuItem.Click
-        ' Utilice My.Computer.Clipboard para insertar el texto o las imágenes seleccionadas en el Portapapeles
-    End Sub
-
-    Private Sub PasteToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles PasteToolStripMenuItem.Click
-        'Utilice My.Computer.Clipboard.GetText() o My.Computer.Clipboard.GetData para recuperar la información del Portapapeles.
-    End Sub
-
-    Private Sub ToolBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ToolBarToolStripMenuItem.Click
-        Me.ToolStrip.Visible = Me.ToolBarToolStripMenuItem.Checked
-    End Sub
-
-    Private Sub StatusBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles StatusBarToolStripMenuItem.Click
-        Me.StatusStrip.Visible = Me.StatusBarToolStripMenuItem.Checked
-    End Sub
-
-    Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CascadeToolStripMenuItem.Click
-        Me.LayoutMdi(MdiLayout.Cascade)
-    End Sub
-
-    Private Sub TileVerticalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles TileVerticalToolStripMenuItem.Click
-        Me.LayoutMdi(MdiLayout.TileVertical)
-    End Sub
-
-    Private Sub TileHorizontalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles TileHorizontalToolStripMenuItem.Click
-        Me.LayoutMdi(MdiLayout.TileHorizontal)
-    End Sub
-
-    Private Sub ArrangeIconsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ArrangeIconsToolStripMenuItem.Click
-        Me.LayoutMdi(MdiLayout.ArrangeIcons)
-    End Sub
-
-    Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CloseAllToolStripMenuItem.Click
-        ' Cierre todos los formularios secundarios del principal.
-        For Each ChildForm As Form In Me.MdiChildren
-            ChildForm.Close()
-        Next
-    End Sub
-
     Private m_ChildFormNumber As Integer
-
     Private Sub MDI_Papeleria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LOGIN.Close()
-        Carga_formulario(Form1)
     End Sub
+    Private Function Carga_formulario(ByVal form As Form) As Boolean
+        For Each f As Form In Application.OpenForms
+            If f.Name = form.Name Then
+                form.Select()
+                Return False
+            End If
+        Next
+        form.MdiParent = Me
+        form.Show()
+        Return True
+    End Function
+    Sub oculta()
+        btn_lgout.Hide()
+        BTN_CONTADOS.Hide()
+        BTN_CREDITO.Hide()
+    End Sub
+    Sub MUESTRA()
+        btn_lgout.Show()
+        BTN_CONTADOS.Show()
+        BTN_CREDITO.Show()
+
+    End Sub
+
+
 
     Private Sub btn_lgout_Click(sender As Object, e As EventArgs) Handles btn_lgout.Click
         LOGIN.Show()
@@ -97,7 +37,18 @@ Public Class MDI_Papeleria
         LOGIN.TXT_PASS.Clear()
     End Sub
 
-    Private Sub EgistroClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EgistroClientesToolStripMenuItem.Click
-        Carga_formulario(REGISTRAR_CLIENTES)
+    Private Sub BTN_CONTADOS_Click(sender As Object, e As EventArgs) Handles BTN_CONTADOS.Click
+        Carga_formulario(Form1)
+        oculta()
+
+    End Sub
+    Private Sub BTNLOGOUT_MouseHover(sender As Object, e As EventArgs) Handles btn_lgout.MouseHover
+        ToolTip.SetToolTip(btn_lgout, "LOG OUT")
+
+    End Sub
+
+    Private Sub BTN_CONTADOS_MouseHover(sender As Object, e As EventArgs) Handles BTN_CONTADOS.MouseHover
+        ToolTip.SetToolTip(BTN_CONTADOS, "CONTADO")
+
     End Sub
 End Class
