@@ -1,5 +1,6 @@
 ﻿Public Class Form1
 
+
     Dim descuento As Double
     Dim subtotal As Double = 0
     Dim iva As Double
@@ -7,6 +8,19 @@
     Dim A As Double
     Dim FILA_p_EDITAR As Double
 
+
+
+    Private Function Carga_formulario(ByVal form As Form) As Boolean
+        For Each f As Form In Application.OpenForms
+            If f.Name = form.Name Then
+                form.Select()
+                Return False
+            End If
+        Next
+        form.MdiParent = Me
+        form.Show()
+        Return True
+    End Function
     Private Function CHEQUEA_CODIGO(ByVal CODIGO As String) As Boolean
         Dim fila As Byte = 0
 
@@ -193,7 +207,6 @@
     Private Sub TXT_IMPORTE_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_IMPORTE.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
             e.Handled = True
-            'ENVIAR ESA PULSACIÓN
             SendKeys.Send("{tab}")
         End If
     End Sub
@@ -201,7 +214,6 @@
     Private Sub BTN_AGREGA_KeyPress(sender As Object, e As KeyPressEventArgs) Handles BTN_AGREGA.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
             e.Handled = True
-            'ENVIAR ESA PULSACIÓN
             BTN_AGREGA_Click(Nothing, Nothing)
         End If
     End Sub
@@ -217,4 +229,17 @@
     Private Sub Form1_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         MDI_Papeleria.MUESTRA()
     End Sub
+
+    Private Sub Btn_cuenta_click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim form2 As New Buscador()
+
+        form2.ShowDialog()
+
+    End Sub
+
+    Private Sub BTN_CUENTA_Click_1(sender As Object, e As EventArgs) Handles BTN_CUENTA.Click
+        Dim form2 As New Buscador()
+        form2.ShowDialog()
+    End Sub
 End Class
+

@@ -1,5 +1,24 @@
 ﻿Imports System.Data.OleDb
-Public Class buscador
+Public Class Buscador
+
+    Private Sub Btn_agrega_Click(sender As Object, e As EventArgs) Handles btn_agrega.Click
+        ' Asegúrate de que se ha seleccionado una fila en el DataGridView
+        If DataGridView1.SelectedRows.Count > 0 Then
+            ' Obtén el valor de la celda seleccionada
+            Dim selectedValue As String = DataGridView1.SelectedRows(0).Cells("codigo").Value.ToString()
+
+            ' Crea una instancia de Form2
+            Dim form2 As New Form1()
+
+            ' Establece el valor en la propiedad del segundo formulario
+            form2.TXT_CODIGO.Text = selectedValue
+
+            ' Muestra el segundo formulario
+            form2.ShowDialog()
+        Else
+            MessageBox.Show("Por favor, selecciona una fila.")
+        End If
+    End Sub
     Sub Carga_productos(ByVal grilla As DataGridView,
                  ByVal nombre_tabla As String,
                  ByVal campoSql As String,
@@ -27,7 +46,7 @@ Public Class buscador
         End Try
 
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_agrega.Click
         Carga_productos(DataGridView1, "NOMBRE", "DOMICILIO", "RUT")
 
     End Sub
