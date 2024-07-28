@@ -6,12 +6,16 @@ Public Class Buscador
         If DataGridView1.SelectedRows.Count > 0 Then
             ' Obtén el valor de la celda seleccionada
             Dim selectedValue As String = DataGridView1.SelectedRows(0).Cells("codigo").Value.ToString()
+            Dim selectedValue1 As String = DataGridView1.SelectedRows(1).Cells("detalle").Value.ToString()
+            Dim selectedValue2 As String = DataGridView1.SelectedRows(1).Cells("precio").Value.ToString()
 
-            ' Crea una instancia de Form2
             Dim form2 As New Form1()
 
             ' Establece el valor en la propiedad del segundo formulario
             form2.TXT_CODIGO.Text = selectedValue
+            form2.TXT_DESCRIPCION.Text = selectedValue1
+            form2.TXT_PRECIO.Text = selectedValue2
+
 
             ' Muestra el segundo formulario
             form2.ShowDialog()
@@ -24,9 +28,9 @@ Public Class Buscador
                  ByVal campoSql As String,
                  ByVal C_ORDEN As String)
         Try
-            Dim da As OleDbDataAdapter 'DATAADPTER
+            Dim da As OleDbDataAdapter
             Dim dt As DataTable
-            Dim consulta As String 'f9
+            Dim consulta As String
             consulta = "Select "
             If campoSql = "" Then
                 consulta += "*"
@@ -47,7 +51,7 @@ Public Class Buscador
 
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_agrega.Click
-        Carga_productos(DataGridView1, "NOMBRE", "DOMICILIO", "RUT")
+        Carga_productos(DataGridView1, "CODIGO", "DETALLE", "PRECIO COMPRA")
 
     End Sub
 

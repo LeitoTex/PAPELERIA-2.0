@@ -26,16 +26,16 @@ Partial Class Buscador
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.btn_agrega = New System.Windows.Forms.Button()
-        Me.PapeleriaDataSet = New PAPELERIA_2._0.papeleriaDataSet()
         Me.PapeleriaDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PapeleriaDataSet = New PAPELERIA_2._0.papeleriaDataSet()
+        Me.btn_agrega = New System.Windows.Forms.Button()
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.detalle = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PapeleriaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PapeleriaDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PapeleriaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -58,12 +58,22 @@ Partial Class Buscador
         '
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.detalle, Me.cantidad, Me.precio})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.detalle, Me.stock, Me.precio})
         Me.DataGridView1.DataSource = Me.PapeleriaDataSetBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(75, 100)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(502, 204)
         Me.DataGridView1.TabIndex = 2
+        '
+        'PapeleriaDataSetBindingSource
+        '
+        Me.PapeleriaDataSetBindingSource.DataSource = Me.PapeleriaDataSet
+        Me.PapeleriaDataSetBindingSource.Position = 0
+        '
+        'PapeleriaDataSet
+        '
+        Me.PapeleriaDataSet.DataSetName = "papeleriaDataSet"
+        Me.PapeleriaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'btn_agrega
         '
@@ -73,16 +83,6 @@ Partial Class Buscador
         Me.btn_agrega.TabIndex = 3
         Me.btn_agrega.Text = "Button1"
         Me.btn_agrega.UseVisualStyleBackColor = True
-        '
-        'PapeleriaDataSet
-        '
-        Me.PapeleriaDataSet.DataSetName = "papeleriaDataSet"
-        Me.PapeleriaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PapeleriaDataSetBindingSource
-        '
-        Me.PapeleriaDataSetBindingSource.DataSource = Me.PapeleriaDataSet
-        Me.PapeleriaDataSetBindingSource.Position = 0
         '
         'codigo
         '
@@ -94,10 +94,10 @@ Partial Class Buscador
         Me.detalle.HeaderText = "detalle"
         Me.detalle.Name = "detalle"
         '
-        'cantidad
+        'stock
         '
-        Me.cantidad.HeaderText = "cantidad"
-        Me.cantidad.Name = "cantidad"
+        Me.stock.HeaderText = "stock"
+        Me.stock.Name = "stock"
         '
         'precio
         '
@@ -116,8 +116,8 @@ Partial Class Buscador
         Me.Name = "Buscador"
         Me.Text = "buscador"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PapeleriaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PapeleriaDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PapeleriaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -127,10 +127,10 @@ Partial Class Buscador
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btn_agrega As Button
-    Friend WithEvents codigo As DataGridViewTextBoxColumn
-    Friend WithEvents detalle As DataGridViewTextBoxColumn
     Friend WithEvents PapeleriaDataSetBindingSource As BindingSource
     Friend WithEvents PapeleriaDataSet As papeleriaDataSet
-    Friend WithEvents cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents codigo As DataGridViewTextBoxColumn
+    Friend WithEvents detalle As DataGridViewTextBoxColumn
+    Friend WithEvents stock As DataGridViewTextBoxColumn
     Friend WithEvents precio As DataGridViewTextBoxColumn
 End Class
