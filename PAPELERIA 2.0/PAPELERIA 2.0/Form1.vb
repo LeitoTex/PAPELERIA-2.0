@@ -1,6 +1,5 @@
 ﻿Public Class Form1
 
-
     Dim descuento As Double
     Dim subtotal As Double = 0
     Dim iva As Double
@@ -240,6 +239,10 @@
     Private Sub BTN_CUENTA_Click_1(sender As Object, e As EventArgs) Handles BTN_CUENTA.Click
         Dim form2 As New Buscador()
         form2.ShowDialog()
+    End Sub
+
+    Private Sub TXT_CODIGO_TextChanged(sender As Object, e As EventArgs) Handles TXT_CODIGO.TextChanged
+
     End Sub
 End Class
 
