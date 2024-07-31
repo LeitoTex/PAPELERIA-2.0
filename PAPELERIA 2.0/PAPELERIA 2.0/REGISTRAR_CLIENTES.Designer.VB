@@ -145,7 +145,7 @@ Partial Class REGISTRAR_CLIENTES
         Me.BTN_NUEVO.Name = "BTN_NUEVO"
         Me.BTN_NUEVO.Size = New System.Drawing.Size(80, 24)
         Me.BTN_NUEVO.TabIndex = 23
-        Me.BTN_NUEVO.Text = "NUEVO"
+        Me.BTN_NUEVO.Text = "NUEVOoo"
         Me.BTN_NUEVO.UseVisualStyleBackColor = True
         '
         'txt_RUT
