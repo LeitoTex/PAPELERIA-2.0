@@ -33,6 +33,7 @@ Partial Class Buscador
         Me.PapeleriaDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PapeleriaDataSet = New PAPELERIA_2._0.papeleriaDataSet()
         Me.btn_agrega = New System.Windows.Forms.Button()
+        Me.btn_carga = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PapeleriaDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PapeleriaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,11 +105,21 @@ Partial Class Buscador
         Me.btn_agrega.Text = "Button1"
         Me.btn_agrega.UseVisualStyleBackColor = True
         '
+        'btn_carga
+        '
+        Me.btn_carga.Location = New System.Drawing.Point(584, 110)
+        Me.btn_carga.Name = "btn_carga"
+        Me.btn_carga.Size = New System.Drawing.Size(75, 23)
+        Me.btn_carga.TabIndex = 4
+        Me.btn_carga.Text = "carga"
+        Me.btn_carga.UseVisualStyleBackColor = True
+        '
         'Buscador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(700, 338)
+        Me.Controls.Add(Me.btn_carga)
         Me.Controls.Add(Me.btn_agrega)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
@@ -133,4 +144,5 @@ Partial Class Buscador
     Friend WithEvents detalle As DataGridViewTextBoxColumn
     Friend WithEvents stock As DataGridViewTextBoxColumn
     Friend WithEvents precio As DataGridViewTextBoxColumn
+    Friend WithEvents btn_carga As Button
 End Class

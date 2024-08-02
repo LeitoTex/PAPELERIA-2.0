@@ -95,6 +95,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="cls_clientes.vb" />
+    <Compile Include="creditos.Designer.vb">
+      <DependentUpon>creditos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="creditos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LOGIN.Designer.vb">
       <DependentUpon>LOGIN.vb</DependentUpon>
     </Compile>
@@ -146,6 +152,9 @@
   <ItemGroup>
     <EmbeddedResource Include="buscador.resx">
       <DependentUpon>buscador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="creditos.resx">
+      <DependentUpon>creditos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

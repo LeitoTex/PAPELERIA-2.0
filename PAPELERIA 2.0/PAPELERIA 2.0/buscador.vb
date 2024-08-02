@@ -7,7 +7,7 @@ Public Class Buscador
             ' Obtén el valor de la celda seleccionada
             Dim selectedValue As String = DataGridView1.SelectedRows(0).Cells("codigo").Value.ToString()
             Dim selectedValue1 As String = DataGridView1.SelectedRows(1).Cells("detalle").Value.ToString()
-            Dim selectedValue2 As String = DataGridView1.SelectedRows(1).Cells("precio").Value.ToString()
+            Dim selectedValue2 As String = DataGridView1.SelectedRows(2).Cells("precio").Value.ToString()
 
             Dim form2 As New Form1()
 
@@ -50,13 +50,9 @@ Public Class Buscador
         End Try
 
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_agrega.Click
-        Carga_productos(DataGridView1, "CODIGO", "DETALLE", "PRECIO COMPRA")
 
-    End Sub
-
-
-    Private Sub Buscador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Btn_carga_Click(sender As Object, e As EventArgs) Handles btn_carga.Click
+        Carga_productos(DataGridView1, "Productos", "Id,descripcion,precioventa", "Id")
 
     End Sub
 End Class

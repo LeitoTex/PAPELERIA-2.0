@@ -4,4 +4,9 @@
 -impresion
 -exportar pdf
 -buscador cuentas corrientes
+-formulario estados de cuenta
 -validar rut
+-cuenta contado generica 9000
+-limite de cuenta
+-formulario ingreso mercaderia
+
