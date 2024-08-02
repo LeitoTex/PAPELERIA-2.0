@@ -1,0 +1,7 @@
+-devolucion contado
+-credito
+-n/c 
+-impresion
+-exportar pdf
+-buscador cuentas corrientes
+-validar rut

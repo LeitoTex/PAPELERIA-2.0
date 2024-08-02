@@ -33,6 +33,7 @@ Partial Class MDI_Papeleria
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTN_CONTADOS = New System.Windows.Forms.Button()
         Me.BTN_CREDITO = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.StatusStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -100,11 +101,21 @@ Partial Class MDI_Papeleria
         Me.BTN_CREDITO.Text = "CREDITO"
         Me.BTN_CREDITO.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(176, 46)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(76, 45)
+        Me.Button1.TabIndex = 19
+        Me.Button1.Text = "CREDITO"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'MDI_Papeleria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(670, 314)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.BTN_CREDITO)
         Me.Controls.Add(Me.BTN_CONTADOS)
         Me.Controls.Add(Me.btn_lgout)
@@ -131,4 +142,5 @@ Partial Class MDI_Papeleria
     Friend WithEvents ComprasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BTN_CONTADOS As Button
     Friend WithEvents BTN_CREDITO As Button
+    Friend WithEvents Button1 As Button
 End Class
