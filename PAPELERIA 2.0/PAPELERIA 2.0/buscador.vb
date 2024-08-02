@@ -1,5 +1,7 @@
 ﻿Imports System.Data.OleDb
 Public Class Buscador
+    Dim n As Integer
+
 
     Private Sub Btn_agrega_Click(sender As Object, e As EventArgs) Handles btn_agrega.Click
         ' Asegúrate de que se ha seleccionado una fila en el DataGridView
@@ -23,10 +25,39 @@ Public Class Buscador
             MessageBox.Show("Por favor, selecciona una fila.")
         End If
     End Sub
-    Sub Carga_productos(ByVal grilla As DataGridView,
-                 ByVal nombre_tabla As String,
-                 ByVal campoSql As String,
-                 ByVal C_ORDEN As String)
+
+    '  Sub ActualizarTabla(ByVal grilla As DataGridView)
+
+    '  Dim da1 As OleDbDataAdapter 'DATAADPTER
+    ' Dim dt1 As DataTable
+    'Dim consulta As String 'f9
+
+    'Try
+
+    '       consulta = " SELECT productos.[Id], productos.[descripcion], productos.[precio venta]
+    'FROM productos; "
+
+    '           da1 = New OleDbDataAdapter(consulta, RutaDB_papeleria)
+    '          dt1 = New DataTable
+    '         da1.Fill(dt1)
+    '        n = dt1.Rows.Count
+
+    '       grilla.DataSource = dt1
+    '      grilla.ReadOnly = True 'SOLO DE LECTURA
+    'Catch ex As Exception
+    '       MsgBox(ex.Message)
+    'End Try
+
+    'End Sub
+
+    Private Sub Buscador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Actualizartabla(Me.DataGridView1, "productos", "", "id") 'tabla usuarios ordenado por apellido        ' Label9.Text = n
+    End Sub
+
+    Sub Actualizartabla(ByVal grilla As DataGridView,
+                ByVal nombre_tabla As String,
+               ByVal campoSql As String,
+              ByVal C_ORDEN As String)
         Try
             Dim da As OleDbDataAdapter
             Dim dt As DataTable
@@ -51,8 +82,9 @@ Public Class Buscador
 
     End Sub
 
-    Private Sub Btn_carga_Click(sender As Object, e As EventArgs) Handles btn_carga.Click
-        Carga_productos(DataGridView1, "Productos", "Id,descripcion,precioventa", "Id")
 
-    End Sub
+    '  Private Sub Btn_carga_Click(sender As Object, e As EventArgs) Handles btn_carga.Click
+    '     Carga_productos(DataGridView1, "Productos", "Id,descripcion,precioventa", "Id")
+
+    ' End Sub
 End Class

@@ -26,10 +26,6 @@ Partial Class Buscador
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.detalle = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PapeleriaDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PapeleriaDataSet = New PAPELERIA_2._0.papeleriaDataSet()
         Me.btn_agrega = New System.Windows.Forms.Button()
@@ -57,34 +53,11 @@ Partial Class Buscador
         '
         'DataGridView1
         '
-        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.detalle, Me.stock, Me.precio})
-        Me.DataGridView1.DataSource = Me.PapeleriaDataSetBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(75, 100)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(502, 204)
         Me.DataGridView1.TabIndex = 2
-        '
-        'codigo
-        '
-        Me.codigo.HeaderText = "codigo"
-        Me.codigo.Name = "codigo"
-        '
-        'detalle
-        '
-        Me.detalle.HeaderText = "detalle"
-        Me.detalle.Name = "detalle"
-        '
-        'stock
-        '
-        Me.stock.HeaderText = "stock"
-        Me.stock.Name = "stock"
-        '
-        'precio
-        '
-        Me.precio.HeaderText = "precio"
-        Me.precio.Name = "precio"
         '
         'PapeleriaDataSetBindingSource
         '
@@ -140,9 +113,5 @@ Partial Class Buscador
     Friend WithEvents btn_agrega As Button
     Friend WithEvents PapeleriaDataSetBindingSource As BindingSource
     Friend WithEvents PapeleriaDataSet As papeleriaDataSet
-    Friend WithEvents codigo As DataGridViewTextBoxColumn
-    Friend WithEvents detalle As DataGridViewTextBoxColumn
-    Friend WithEvents stock As DataGridViewTextBoxColumn
-    Friend WithEvents precio As DataGridViewTextBoxColumn
     Friend WithEvents btn_carga As Button
 End Class
