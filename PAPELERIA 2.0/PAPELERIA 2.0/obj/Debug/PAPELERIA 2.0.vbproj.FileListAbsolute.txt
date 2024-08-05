@@ -30,21 +30,22 @@ C:\Users\Equipo\OneDrive\Escritorio\Prog Libreria\PAPELERIA 2.0-20240628T195340Z
 C:\Users\Equipo\OneDrive\Escritorio\Prog Libreria\PAPELERIA 2.0-20240628T195340Z-001\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.xml
 C:\Users\Equipo\OneDrive\Escritorio\Prog Libreria\PAPELERIA 2.0-20240628T195340Z-001\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.pdb
 C:\Users\Equipo\OneDrive\Escritorio\Prog Libreria\PAPELERIA 2.0-20240628T195340Z-001\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.MDI_Papeleria.resources
-C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\bin\Debug\PAPELERIA 2.0.exe.config
-C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\bin\Debug\PAPELERIA 2.0.exe
-C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\bin\Debug\PAPELERIA 2.0.pdb
-C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\bin\Debug\PAPELERIA 2.0.xml
+C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\bin\Debug\papeleria.accdb
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.vbproj.AssemblyReference.cache
-C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.buscador.resources
+C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.Buscador.resources
+C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.creditos.resources
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.Form1.resources
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.LOGIN.resources
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.MDI_Papeleria.resources
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.Resources.resources
+C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.Producto.resources
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.REGISTRAR_CLIENTES.resources
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.vbproj.GenerateResource.cache
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.vbproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\bin\Debug\PAPELERIA 2.0.exe.config
+C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\bin\Debug\PAPELERIA 2.0.exe
+C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\bin\Debug\PAPELERIA 2.0.pdb
+C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\bin\Debug\PAPELERIA 2.0.xml
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.exe
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.xml
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.pdb
-C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\bin\Debug\papeleria.accdb
-C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.creditos.resources

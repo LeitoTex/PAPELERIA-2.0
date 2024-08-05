@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class FORM1
 
     Dim descuento As Double
     Dim subtotal As Double = 0

@@ -7,8 +7,6 @@
     Dim A As Double
     Dim FILA_p_EDITAR As Double
 
-
-
     Private Function Carga_formulario(ByVal form As Form) As Boolean
         For Each f As Form In Application.OpenForms
             If f.Name = form.Name Then

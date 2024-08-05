@@ -22,12 +22,10 @@ Partial Class REGISTRAR_CLIENTES
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DGV1 = New System.Windows.Forms.DataGridView()
-        Me.DTP1 = New System.Windows.Forms.DateTimePicker()
         Me.BTN_FIN = New System.Windows.Forms.Button()
         Me.BTN_ELIMINAR = New System.Windows.Forms.Button()
         Me.BTN_CANCELAR = New System.Windows.Forms.Button()
@@ -39,15 +37,6 @@ Partial Class REGISTRAR_CLIENTES
         Me.TXT_NOMBRE = New System.Windows.Forms.TextBox()
         CType(Me.DGV1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(89, 189)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(42, 13)
-        Me.Label4.TabIndex = 34
-        Me.Label4.Text = "FECHA"
         '
         'Label3
         '
@@ -85,14 +74,6 @@ Partial Class REGISTRAR_CLIENTES
         Me.DGV1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGV1.Size = New System.Drawing.Size(477, 138)
         Me.DGV1.TabIndex = 30
-        '
-        'DTP1
-        '
-        Me.DTP1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTP1.Location = New System.Drawing.Point(171, 182)
-        Me.DTP1.Name = "DTP1"
-        Me.DTP1.Size = New System.Drawing.Size(219, 20)
-        Me.DTP1.TabIndex = 22
         '
         'BTN_FIN
         '
@@ -174,12 +155,10 @@ Partial Class REGISTRAR_CLIENTES
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DGV1)
-        Me.Controls.Add(Me.DTP1)
         Me.Controls.Add(Me.BTN_FIN)
         Me.Controls.Add(Me.BTN_ELIMINAR)
         Me.Controls.Add(Me.BTN_CANCELAR)
@@ -196,12 +175,10 @@ Partial Class REGISTRAR_CLIENTES
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DGV1 As DataGridView
-    Friend WithEvents DTP1 As DateTimePicker
     Friend WithEvents BTN_FIN As Button
     Friend WithEvents BTN_ELIMINAR As Button
     Friend WithEvents BTN_CANCELAR As Button

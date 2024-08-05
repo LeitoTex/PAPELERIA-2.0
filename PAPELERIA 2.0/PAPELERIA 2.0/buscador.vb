@@ -99,9 +99,9 @@ Where (((USUARIOS.nombre) Like '" & DATO & "'));"
             For i = 0 To dt.Rows.Count - 1
                 Dim dr As DataRow
                 dr = dt.Rows(i)
-                ListBox1.Items.Add(dr(0) & " - " & dr(1))
-                ListBox2.Items.Add(dr(2))
-                ListBox3.Items.Add(dr(3))
+                'ListBox1.Items.Add(dr(0) & " - " & dr(1))
+                'ListBox2.Items.Add(dr(2))
+                'ListBox3.Items.Add(dr(3))
 
             Next
         Catch ex As Exception

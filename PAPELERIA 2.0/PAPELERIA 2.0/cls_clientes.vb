@@ -14,8 +14,8 @@ Public Class Cls_clientes
 
         Try
 
-            Sql = "Insert into clientes (nombre, domicilio, rut, fecha_Creacion) " _
-            + "Values (@nombre,@domicilio,@rut,@fecha_Creacion)"
+            Sql = "Insert into clientes (nombre, domicilio, rut) " _
+            + "Values (@nombre,@domicilio,@rut)"
 
             ComandoSql = New OleDbCommand
             With ComandoSql
@@ -24,7 +24,6 @@ Public Class Cls_clientes
                 .Parameters.AddWithValue("@nombre", nombre.ToUpper)
                 .Parameters.AddWithValue("@domicilio", domicilio.ToUpper)
                 .Parameters.AddWithValue("@rut", rut.ToUpper)
-                .Parameters.AddWithValue("@fecha_creacion", value)
 
                 .ExecuteNonQuery()
             End With
@@ -47,7 +46,6 @@ Public Class Cls_clientes
     Function Modifica_clientes(ByVal nombre As String,
                                      ByVal DOMICILIO As String,
                                      ByVal RUT As String,
-                                     ByVal fecha_Creacion As String,
                                      ByVal id As Integer) As Boolean
         Try
             Dim con As New OleDbConnection(RutaDB_papeleria)
@@ -56,7 +54,7 @@ Public Class Cls_clientes
 
             con.Open()
             'TOUPPER  MAYUSCULAS  TOLOWER MINUSCULAS
-            Sql = "UPDATE clientes SET Nombre = '" & nombre.ToUpper & "',domicilio = '" & DOMICILIO.ToUpper & "',rut = '" & RUT & "',fecha_creacion = '" & fecha_Creacion & "' WHERE id =" & id & ""
+            Sql = "UPDATE clientes SET Nombre = '" & nombre.ToUpper & "',domicilio = '" & DOMICILIO.ToUpper & "',rut = '" & RUT & "' WHERE id =" & id & ""
 
             ComandoSql = New OleDbCommand(Sql, con)
 

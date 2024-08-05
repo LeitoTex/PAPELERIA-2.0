@@ -121,78 +121,77 @@ Public Class REGISTRAR_CLIENTES
     End Sub
 
 
-    Private Sub BTN_AGREGAR_Click(sender As Object, e As EventArgs) Handles BTN_AGREGAR.Click
-        Try
-            If ValidarDatos() Then
-                '  obj_usuario.AgregaUsuario()
-                If obj_clientes.Agregaclientes(TXT_NOMBRE.Text, TXT_domicilio.Text, txt_RUT.Text, DTP1.Value) = True Then
+    'Private Sub BTN_AGREGAR_Click(sender As Object, e As EventArgs) Handles BTN_AGREGAR.Click
+    '    Try
+    '        If ValidarDatos() Then
+    '            '  obj_usuario.AgregaUsuario()
+    '            If obj_clientes.Agregaclientes(TXT_NOMBRE.Text, TXT_domicilio.Text, txt_RUT.Text) = True Then
 
-                    MsgBox("Registro ingresado satisfactoriamente", MsgBoxStyle.Information, "Confirmacion")
-                    Me.LimpiarCampos()
-                    ActualizarTabla(Me.DGV1, "clientes", "", "nombre")
-                Else
-                    MsgBox("Error al ingresar el registro, reintente la accion", MsgBoxStyle.Critical, "Error")
-                End If
-            End If
+    '                MsgBox("Registro ingresado satisfactoriamente", MsgBoxStyle.Information, "Confirmacion")
+    '                Me.LimpiarCampos()
+    '                ActualizarTabla(Me.DGV1, "clientes", "", "nombre")
+    '            Else
+    '                MsgBox("Error al ingresar el registro, reintente la accion", MsgBoxStyle.Critical, "Error")
+    '            End If
+    '        End If
 
 
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error de Validación de datos")
-        End Try
-        Me.ModoInsercion()
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message, MsgBoxStyle.Critical, "Error de Validación de datos")
+    '    End Try
+    '    Me.ModoInsercion()
 
-    End Sub
+    'End Sub
 
-    Private Sub DGV1_MouseClick(sender As Object, e As MouseEventArgs) Handles DGV1.MouseClick
-        If DGV1.SelectedRows.Count = 0 Then
-            MsgBox("Debe seleccionar un usuario para poder editarlo", MsgBoxStyle.Critical, "Error")
-            DGV1.Focus()
-        Else
-            Me.ModoModificacion()
-            id = ObtenerCampo(Me.DGV1, 0)
-            TXT_NOMBRE.Text = ObtenerCampo(Me.DGV1, 1)
-            TXT_domicilio.Text = ObtenerCampo(Me.DGV1, 2)
-            txt_RUT.Text = ObtenerCampo(Me.DGV1, 3)
-            DTP1.Text = ObtenerCampo(Me.DGV1, 4)
+    'Private Sub DGV1_MouseClick(sender As Object, e As MouseEventArgs) Handles DGV1.MouseClick
+    '    If DGV1.SelectedRows.Count = 0 Then
+    '        MsgBox("Debe seleccionar un usuario para poder editarlo", MsgBoxStyle.Critical, "Error")
+    '        DGV1.Focus()
+    '    Else
+    '        Me.ModoModificacion()
+    '        id = ObtenerCampo(Me.DGV1, 0)
+    '        TXT_NOMBRE.Text = ObtenerCampo(Me.DGV1, 1)
+    '        TXT_domicilio.Text = ObtenerCampo(Me.DGV1, 2)
+    '        txt_RUT.Text = ObtenerCampo(Me.DGV1, 3)
+    '        DTP1.Text = ObtenerCampo(Me.DGV1, 4)
 
-            BTN_NUEVO.Enabled = False
-            BTN_AGREGAR.Enabled = False
-            BTN_ELIMINAR.Enabled = True
+    '        BTN_NUEVO.Enabled = False
+    '        BTN_AGREGAR.Enabled = False
+    '        BTN_ELIMINAR.Enabled = True
 
-            ' txtNombre.Focus()
-            '   Label6.Text = dgv1.CurrentRow.Index + 1
-            'ini = dgv1.CurrentRow.Index
+    '        ' txtNombre.Focus()
+    '        '   Label6.Text = dgv1.CurrentRow.Index + 1
+    '        'ini = dgv1.CurrentRow.Index
 
-        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
-    Private Sub BTN_MODIFICAR_Click(sender As Object, e As EventArgs) Handles BTN_MODIFICAR.Click
-        Try
-            Dim i = MsgBox("¿Desea modificar ese registro?", MsgBoxStyle.Critical + MsgBoxStyle.YesNo, "Confirmación")
-            If i = MsgBoxResult.Yes Then
-                If ValidarDatos() Then
-                    If obj_clientes.Modificaclientes(TXT_NOMBRE.Text,
-                                                     TXT_domicilio.Text,
-                                                     txt_RUT.Text,
-                                                     DTP1.Value,
-                                                     id) = True Then
-                        MsgBox("Registro actualizado satisfactoriamente", MsgBoxStyle.Information, "Confirmacion")
-                        Me.LimpiarCampos()
-                        ActualizarTabla(Me.DGV1, "clientes", "", "id")
+    'Private Sub BTN_MODIFICAR_Click(sender As Object, e As EventArgs) Handles BTN_MODIFICAR.Click
+    '    Try
+    '        Dim i = MsgBox("¿Desea modificar ese registro?", MsgBoxStyle.Critical + MsgBoxStyle.YesNo, "Confirmación")
+    '        If i = MsgBoxResult.Yes Then
+    '            If ValidarDatos() Then
+    '                If obj_clientes.Modificaclientes(TXT_NOMBRE.Text,
+    '                                                 TXT_domicilio.Text,
+    '                                                 txt_RUT.Text,
+    '                                                 id) = True Then
+    '                    MsgBox("Registro actualizado satisfactoriamente", MsgBoxStyle.Information, "Confirmacion")
+    '                    Me.LimpiarCampos()
+    '                    ActualizarTabla(Me.DGV1, "clientes", "", "id")
 
-                        Me.ModoInsercion()
-                    Else
-                        MsgBox("Error al modificar el registro, reintente la acción", MsgBoxStyle.Critical, "Error")
-                    End If
-                End If
-            End If
+    '                    Me.ModoInsercion()
+    '                Else
+    '                    MsgBox("Error al modificar el registro, reintente la acción", MsgBoxStyle.Critical, "Error")
+    '                End If
+    '            End If
+    '        End If
 
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error de Validación de datos")
-        End Try
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message, MsgBoxStyle.Critical, "Error de Validación de datos")
+    '    End Try
 
-    End Sub
+    'End Sub
 
     Private Sub BTN_CANCELAR_Click(sender As Object, e As EventArgs) Handles BTN_CANCELAR.Click
         BTN_ELIMINAR.Enabled = True
