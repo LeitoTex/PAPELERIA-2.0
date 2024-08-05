@@ -1,6 +1,4 @@
-﻿Imports System.Windows.Forms
-
-Public Class MDI_Papeleria
+﻿Public Class MDI_Papeleria
 
     Private m_ChildFormNumber As Integer
     Private Sub MDI_Papeleria_Load(sender As Object, e As EventArgs) Handles MyBase.Load

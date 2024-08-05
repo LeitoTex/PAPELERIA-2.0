@@ -27,12 +27,12 @@ Partial Class Buscador
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PapeleriaDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PapeleriaDataSet = New PAPELERIA_2._0.papeleriaDataSet()
+        Me.DataSet = New PAPELERIA_2._0.DataSet1()
         Me.btn_agrega = New System.Windows.Forms.Button()
         Me.btn_carga = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PapeleriaDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PapeleriaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -61,13 +61,13 @@ Partial Class Buscador
         '
         'PapeleriaDataSetBindingSource
         '
-        Me.PapeleriaDataSetBindingSource.DataSource = Me.PapeleriaDataSet
+        Me.PapeleriaDataSetBindingSource.DataSource = Me.DataSet
         Me.PapeleriaDataSetBindingSource.Position = 0
         '
-        'PapeleriaDataSet
+        'DataSet
         '
-        Me.PapeleriaDataSet.DataSetName = "papeleriaDataSet"
-        Me.PapeleriaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.DataSet.DataSetName = "papeleriaDataSet"
+        Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'btn_agrega
         '
@@ -101,7 +101,7 @@ Partial Class Buscador
         Me.Text = "buscador"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PapeleriaDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PapeleriaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -112,6 +112,6 @@ Partial Class Buscador
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btn_agrega As Button
     Friend WithEvents PapeleriaDataSetBindingSource As BindingSource
-    Friend WithEvents PapeleriaDataSet As papeleriaDataSet
     Friend WithEvents btn_carga As Button
+    Friend WithEvents DataSet As DataSet1
 End Class

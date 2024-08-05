@@ -82,6 +82,33 @@ Public Class Buscador
 
     End Sub
 
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        Try
+            Dim SQL As String
+            Dim DATO As String
+
+            DATO = TextBox1.Text & "%"
+            '                   0                  1
+            SQL = "Select productos.nombre_producto, productos.APELLIDO, USUARIOS.NRO_CUENTA, USUARIOS.usuario From USUARIOS
+Where (((USUARIOS.nombre) Like '" & DATO & "'));"
+
+            Dim da As New OleDbDataAdapter(SQL, RutaDB_papeleria)
+            Dim dt As New DataTable
+            da.Fill(dt)
+
+            For i = 0 To dt.Rows.Count - 1
+                Dim dr As DataRow
+                dr = dt.Rows(i)
+                ListBox1.Items.Add(dr(0) & " - " & dr(1))
+                ListBox2.Items.Add(dr(2))
+                ListBox3.Items.Add(dr(3))
+
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
 
     '  Private Sub Btn_carga_Click(sender As Object, e As EventArgs) Handles btn_carga.Click
     '     Carga_productos(DataGridView1, "Productos", "Id,descripcion,precioventa", "Id")
