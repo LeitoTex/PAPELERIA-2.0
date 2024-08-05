@@ -51,7 +51,6 @@ Partial Class FORM1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.BTN_ELIMINA = New System.Windows.Forms.Button()
-        Me.BTN_NUEVO = New System.Windows.Forms.Button()
         Me.BTN_AGREGA = New System.Windows.Forms.Button()
         Me.TXT_CANTIDAD = New System.Windows.Forms.TextBox()
         Me.TXT_PRECIO = New System.Windows.Forms.TextBox()
@@ -69,6 +68,8 @@ Partial Class FORM1
         Me.TXT_IMPORTE = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.BTN_ACEPTAR = New System.Windows.Forms.Button()
+        Me.BTN_CANCELAR = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label15
@@ -82,7 +83,7 @@ Partial Class FORM1
         '
         'TXT_RUT
         '
-        Me.TXT_RUT.Location = New System.Drawing.Point(537, 88)
+        Me.TXT_RUT.Location = New System.Drawing.Point(535, 88)
         Me.TXT_RUT.Name = "TXT_RUT"
         Me.TXT_RUT.Size = New System.Drawing.Size(185, 20)
         Me.TXT_RUT.TabIndex = 5
@@ -107,14 +108,14 @@ Partial Class FORM1
         '
         'TXT_DOMICILIO
         '
-        Me.TXT_DOMICILIO.Location = New System.Drawing.Point(330, 88)
+        Me.TXT_DOMICILIO.Location = New System.Drawing.Point(327, 88)
         Me.TXT_DOMICILIO.Name = "TXT_DOMICILIO"
         Me.TXT_DOMICILIO.Size = New System.Drawing.Size(203, 20)
         Me.TXT_DOMICILIO.TabIndex = 4
         '
         'TXT_NOMBRE
         '
-        Me.TXT_NOMBRE.Location = New System.Drawing.Point(122, 88)
+        Me.TXT_NOMBRE.Location = New System.Drawing.Point(120, 88)
         Me.TXT_NOMBRE.Name = "TXT_NOMBRE"
         Me.TXT_NOMBRE.Size = New System.Drawing.Size(202, 20)
         Me.TXT_NOMBRE.TabIndex = 3
@@ -129,7 +130,7 @@ Partial Class FORM1
         '
         'BTN_CUENTA
         '
-        Me.BTN_CUENTA.Location = New System.Drawing.Point(94, 86)
+        Me.BTN_CUENTA.Location = New System.Drawing.Point(93, 86)
         Me.BTN_CUENTA.Name = "BTN_CUENTA"
         Me.BTN_CUENTA.Size = New System.Drawing.Size(22, 23)
         Me.BTN_CUENTA.TabIndex = 2
@@ -265,7 +266,7 @@ Partial Class FORM1
         '
         Me.ColumnHeader5.Text = "DESCUENTO"
         Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader5.Width = 119
+        Me.ColumnHeader5.Width = 116
         '
         'ColumnHeader6
         '
@@ -304,25 +305,16 @@ Partial Class FORM1
         '
         Me.BTN_ELIMINA.Location = New System.Drawing.Point(674, 255)
         Me.BTN_ELIMINA.Name = "BTN_ELIMINA"
-        Me.BTN_ELIMINA.Size = New System.Drawing.Size(68, 24)
+        Me.BTN_ELIMINA.Size = New System.Drawing.Size(87, 24)
         Me.BTN_ELIMINA.TabIndex = 15
         Me.BTN_ELIMINA.Text = "ELIMINAR"
         Me.BTN_ELIMINA.UseVisualStyleBackColor = True
-        '
-        'BTN_NUEVO
-        '
-        Me.BTN_NUEVO.Location = New System.Drawing.Point(674, 218)
-        Me.BTN_NUEVO.Name = "BTN_NUEVO"
-        Me.BTN_NUEVO.Size = New System.Drawing.Size(68, 24)
-        Me.BTN_NUEVO.TabIndex = 14
-        Me.BTN_NUEVO.Text = "NUEVO"
-        Me.BTN_NUEVO.UseVisualStyleBackColor = True
         '
         'BTN_AGREGA
         '
         Me.BTN_AGREGA.Location = New System.Drawing.Point(674, 182)
         Me.BTN_AGREGA.Name = "BTN_AGREGA"
-        Me.BTN_AGREGA.Size = New System.Drawing.Size(68, 24)
+        Me.BTN_AGREGA.Size = New System.Drawing.Size(87, 24)
         Me.BTN_AGREGA.TabIndex = 13
         Me.BTN_AGREGA.Text = "AGREGAR"
         Me.BTN_AGREGA.UseVisualStyleBackColor = True
@@ -459,11 +451,31 @@ Partial Class FORM1
         Me.Label19.TabIndex = 110
         Me.Label19.Text = "IMPORTE"
         '
-        'Form1
+        'BTN_ACEPTAR
+        '
+        Me.BTN_ACEPTAR.Location = New System.Drawing.Point(22, 412)
+        Me.BTN_ACEPTAR.Name = "BTN_ACEPTAR"
+        Me.BTN_ACEPTAR.Size = New System.Drawing.Size(82, 24)
+        Me.BTN_ACEPTAR.TabIndex = 112
+        Me.BTN_ACEPTAR.Text = "ACEPTAR"
+        Me.BTN_ACEPTAR.UseVisualStyleBackColor = True
+        '
+        'BTN_CANCELAR
+        '
+        Me.BTN_CANCELAR.Location = New System.Drawing.Point(115, 412)
+        Me.BTN_CANCELAR.Name = "BTN_CANCELAR"
+        Me.BTN_CANCELAR.Size = New System.Drawing.Size(82, 24)
+        Me.BTN_CANCELAR.TabIndex = 113
+        Me.BTN_CANCELAR.Text = "CANCELAR"
+        Me.BTN_CANCELAR.UseVisualStyleBackColor = True
+        '
+        'FORM1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(840, 499)
+        Me.Controls.Add(Me.BTN_CANCELAR)
+        Me.Controls.Add(Me.BTN_ACEPTAR)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.TXT_IMPORTE)
@@ -496,7 +508,6 @@ Partial Class FORM1
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BTN_ELIMINA)
-        Me.Controls.Add(Me.BTN_NUEVO)
         Me.Controls.Add(Me.BTN_AGREGA)
         Me.Controls.Add(Me.TXT_CANTIDAD)
         Me.Controls.Add(Me.TXT_PRECIO)
@@ -505,7 +516,7 @@ Partial Class FORM1
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Name = "Form1"
+        Me.Name = "FORM1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -541,7 +552,6 @@ Partial Class FORM1
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents BTN_ELIMINA As Button
-    Friend WithEvents BTN_NUEVO As Button
     Friend WithEvents BTN_AGREGA As Button
     Friend WithEvents TXT_CANTIDAD As TextBox
     Friend WithEvents TXT_PRECIO As TextBox
@@ -559,4 +569,6 @@ Partial Class FORM1
     Friend WithEvents TXT_IMPORTE As TextBox
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
+    Friend WithEvents BTN_ACEPTAR As Button
+    Friend WithEvents BTN_CANCELAR As Button
 End Class

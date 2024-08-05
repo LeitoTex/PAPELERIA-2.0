@@ -51,7 +51,7 @@ Partial Class Productos
         '
         'BTN_CANCELAR
         '
-        Me.BTN_CANCELAR.Location = New System.Drawing.Point(353, 126)
+        Me.BTN_CANCELAR.Location = New System.Drawing.Point(353, 197)
         Me.BTN_CANCELAR.Name = "BTN_CANCELAR"
         Me.BTN_CANCELAR.Size = New System.Drawing.Size(87, 22)
         Me.BTN_CANCELAR.TabIndex = 1
@@ -60,7 +60,7 @@ Partial Class Productos
         '
         'BTN_MODIFICAR
         '
-        Me.BTN_MODIFICAR.Location = New System.Drawing.Point(353, 91)
+        Me.BTN_MODIFICAR.Location = New System.Drawing.Point(353, 103)
         Me.BTN_MODIFICAR.Name = "BTN_MODIFICAR"
         Me.BTN_MODIFICAR.Size = New System.Drawing.Size(87, 22)
         Me.BTN_MODIFICAR.TabIndex = 2
@@ -69,7 +69,7 @@ Partial Class Productos
         '
         'BTN_ELIMINAR
         '
-        Me.BTN_ELIMINAR.Location = New System.Drawing.Point(353, 161)
+        Me.BTN_ELIMINAR.Location = New System.Drawing.Point(353, 150)
         Me.BTN_ELIMINAR.Name = "BTN_ELIMINAR"
         Me.BTN_ELIMINAR.Size = New System.Drawing.Size(87, 22)
         Me.BTN_ELIMINAR.TabIndex = 3
@@ -147,14 +147,14 @@ Partial Class Productos
         '
         Me.TXT_PRECIO_COSTO.Location = New System.Drawing.Point(154, 171)
         Me.TXT_PRECIO_COSTO.Name = "TXT_PRECIO_COSTO"
-        Me.TXT_PRECIO_COSTO.Size = New System.Drawing.Size(177, 20)
+        Me.TXT_PRECIO_COSTO.Size = New System.Drawing.Size(65, 20)
         Me.TXT_PRECIO_COSTO.TabIndex = 13
         '
         'TXT_PRECIO_VENTA
         '
         Me.TXT_PRECIO_VENTA.Location = New System.Drawing.Point(154, 209)
         Me.TXT_PRECIO_VENTA.Name = "TXT_PRECIO_VENTA"
-        Me.TXT_PRECIO_VENTA.Size = New System.Drawing.Size(177, 20)
+        Me.TXT_PRECIO_VENTA.Size = New System.Drawing.Size(65, 20)
         Me.TXT_PRECIO_VENTA.TabIndex = 14
         '
         'Label1

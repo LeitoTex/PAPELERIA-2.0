@@ -86,7 +86,7 @@ Partial Class REGISTRAR_CLIENTES
         '
         'BTN_ELIMINAR
         '
-        Me.BTN_ELIMINAR.Location = New System.Drawing.Point(472, 185)
+        Me.BTN_ELIMINAR.Location = New System.Drawing.Point(472, 150)
         Me.BTN_ELIMINAR.Name = "BTN_ELIMINAR"
         Me.BTN_ELIMINAR.Size = New System.Drawing.Size(80, 24)
         Me.BTN_ELIMINAR.TabIndex = 28
@@ -95,7 +95,7 @@ Partial Class REGISTRAR_CLIENTES
         '
         'BTN_CANCELAR
         '
-        Me.BTN_CANCELAR.Location = New System.Drawing.Point(472, 150)
+        Me.BTN_CANCELAR.Location = New System.Drawing.Point(637, 306)
         Me.BTN_CANCELAR.Name = "BTN_CANCELAR"
         Me.BTN_CANCELAR.Size = New System.Drawing.Size(80, 24)
         Me.BTN_CANCELAR.TabIndex = 27
@@ -126,7 +126,7 @@ Partial Class REGISTRAR_CLIENTES
         Me.BTN_NUEVO.Name = "BTN_NUEVO"
         Me.BTN_NUEVO.Size = New System.Drawing.Size(80, 24)
         Me.BTN_NUEVO.TabIndex = 23
-        Me.BTN_NUEVO.Text = "NUEVOoo"
+        Me.BTN_NUEVO.Text = "NUEVO"
         Me.BTN_NUEVO.UseVisualStyleBackColor = True
         '
         'txt_RUT

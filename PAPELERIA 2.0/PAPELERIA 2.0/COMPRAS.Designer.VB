@@ -55,7 +55,6 @@ Partial Class COMPRAS
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.BTN_ELIMINA = New System.Windows.Forms.Button()
-        Me.BTN_NUEVO = New System.Windows.Forms.Button()
         Me.BTN_AGREGA = New System.Windows.Forms.Button()
         Me.TXT_CANTIDAD = New System.Windows.Forms.TextBox()
         Me.TXT_PRECIO = New System.Windows.Forms.TextBox()
@@ -64,6 +63,9 @@ Partial Class COMPRAS
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.BTN_MODIFICAR_PROD = New System.Windows.Forms.Button()
+        Me.BTN_ACEPTAR = New System.Windows.Forms.Button()
+        Me.BTN_MODIFICAR_FACT = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label19
@@ -331,27 +333,18 @@ Partial Class COMPRAS
         '
         'BTN_ELIMINA
         '
-        Me.BTN_ELIMINA.Location = New System.Drawing.Point(674, 264)
+        Me.BTN_ELIMINA.Location = New System.Drawing.Point(674, 263)
         Me.BTN_ELIMINA.Name = "BTN_ELIMINA"
-        Me.BTN_ELIMINA.Size = New System.Drawing.Size(68, 24)
+        Me.BTN_ELIMINA.Size = New System.Drawing.Size(90, 24)
         Me.BTN_ELIMINA.TabIndex = 163
         Me.BTN_ELIMINA.Text = "ELIMINAR"
         Me.BTN_ELIMINA.UseVisualStyleBackColor = True
-        '
-        'BTN_NUEVO
-        '
-        Me.BTN_NUEVO.Location = New System.Drawing.Point(674, 227)
-        Me.BTN_NUEVO.Name = "BTN_NUEVO"
-        Me.BTN_NUEVO.Size = New System.Drawing.Size(68, 24)
-        Me.BTN_NUEVO.TabIndex = 162
-        Me.BTN_NUEVO.Text = "NUEVO"
-        Me.BTN_NUEVO.UseVisualStyleBackColor = True
         '
         'BTN_AGREGA
         '
         Me.BTN_AGREGA.Location = New System.Drawing.Point(674, 191)
         Me.BTN_AGREGA.Name = "BTN_AGREGA"
-        Me.BTN_AGREGA.Size = New System.Drawing.Size(68, 24)
+        Me.BTN_AGREGA.Size = New System.Drawing.Size(90, 24)
         Me.BTN_AGREGA.TabIndex = 161
         Me.BTN_AGREGA.Text = "AGREGAR"
         Me.BTN_AGREGA.UseVisualStyleBackColor = True
@@ -411,12 +404,42 @@ Partial Class COMPRAS
         Me.Label2.TabIndex = 164
         Me.Label2.Text = "PRODUCTO"
         '
+        'BTN_MODIFICAR_PROD
+        '
+        Me.BTN_MODIFICAR_PROD.Location = New System.Drawing.Point(674, 227)
+        Me.BTN_MODIFICAR_PROD.Name = "BTN_MODIFICAR_PROD"
+        Me.BTN_MODIFICAR_PROD.Size = New System.Drawing.Size(90, 24)
+        Me.BTN_MODIFICAR_PROD.TabIndex = 187
+        Me.BTN_MODIFICAR_PROD.Text = "MODIFICAR"
+        Me.BTN_MODIFICAR_PROD.UseVisualStyleBackColor = True
+        '
+        'BTN_ACEPTAR
+        '
+        Me.BTN_ACEPTAR.Location = New System.Drawing.Point(23, 410)
+        Me.BTN_ACEPTAR.Name = "BTN_ACEPTAR"
+        Me.BTN_ACEPTAR.Size = New System.Drawing.Size(79, 24)
+        Me.BTN_ACEPTAR.TabIndex = 188
+        Me.BTN_ACEPTAR.Text = "ACEPTAR"
+        Me.BTN_ACEPTAR.UseVisualStyleBackColor = True
+        '
+        'BTN_MODIFICAR_FACT
+        '
+        Me.BTN_MODIFICAR_FACT.Location = New System.Drawing.Point(108, 410)
+        Me.BTN_MODIFICAR_FACT.Name = "BTN_MODIFICAR_FACT"
+        Me.BTN_MODIFICAR_FACT.Size = New System.Drawing.Size(79, 24)
+        Me.BTN_MODIFICAR_FACT.TabIndex = 189
+        Me.BTN_MODIFICAR_FACT.Text = "MODIFICAR"
+        Me.BTN_MODIFICAR_FACT.UseVisualStyleBackColor = True
+        '
         'COMPRAS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gray
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 468)
+        Me.Controls.Add(Me.BTN_MODIFICAR_FACT)
+        Me.Controls.Add(Me.BTN_ACEPTAR)
+        Me.Controls.Add(Me.BTN_MODIFICAR_PROD)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.TXT_IMPORTE)
         Me.Controls.Add(Me.Label1)
@@ -444,7 +467,6 @@ Partial Class COMPRAS
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BTN_ELIMINA)
-        Me.Controls.Add(Me.BTN_NUEVO)
         Me.Controls.Add(Me.BTN_AGREGA)
         Me.Controls.Add(Me.TXT_CANTIDAD)
         Me.Controls.Add(Me.TXT_PRECIO)
@@ -493,7 +515,6 @@ Partial Class COMPRAS
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents BTN_ELIMINA As Button
-    Friend WithEvents BTN_NUEVO As Button
     Friend WithEvents BTN_AGREGA As Button
     Friend WithEvents TXT_CANTIDAD As TextBox
     Friend WithEvents TXT_PRECIO As TextBox
@@ -502,4 +523,7 @@ Partial Class COMPRAS
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents BTN_MODIFICAR_PROD As Button
+    Friend WithEvents BTN_ACEPTAR As Button
+    Friend WithEvents BTN_MODIFICAR_FACT As Button
 End Class

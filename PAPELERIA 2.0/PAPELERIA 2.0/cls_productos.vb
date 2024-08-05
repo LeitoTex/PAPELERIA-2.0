@@ -4,9 +4,8 @@ Imports System.Data.OleDb
 Imports System.IO
 Public Class cls_productos
     Dim obj_productos As New cls_productos
-
     Dim ComandoSql As OleDbCommand
-        Dim Sql As String
+    Dim Sql As String
 
 
     Function Agregastock(ByVal stock As Integer) As Boolean

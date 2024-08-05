@@ -49,4 +49,24 @@
         ToolTip.SetToolTip(BTN_CONTADOS, "CONTADO")
 
     End Sub
+
+    Private Sub BTN_CREDITO_Click(sender As Object, e As EventArgs) Handles BTN_CREDITO.Click
+        Carga_formulario(creditos)
+        oculta()
+    End Sub
+
+    Private Sub ComprasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ComprasToolStripMenuItem.Click
+        Carga_formulario(COMPRAS)
+        oculta()
+    End Sub
+
+    Private Sub PROVEEDORToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PROVEEDORToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub CLIENTEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CLIENTEToolStripMenuItem.Click
+        Carga_formulario(REGISTRAR_CLIENTES)
+        oculta()
+
+    End Sub
 End Class

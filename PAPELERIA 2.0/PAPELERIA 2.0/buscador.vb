@@ -7,9 +7,9 @@ Public Class Buscador
         ' Asegúrate de que se ha seleccionado una fila en el DataGridView
         If DataGridView1.SelectedRows.Count > 0 Then
             ' Obtén el valor de la celda seleccionada
-            Dim selectedValue As String = DataGridView1.SelectedRows(0).Cells("codigo").Value.ToString()
-            Dim selectedValue1 As String = DataGridView1.SelectedRows(1).Cells("detalle").Value.ToString()
-            Dim selectedValue2 As String = DataGridView1.SelectedRows(2).Cells("precio").Value.ToString()
+            Dim selectedValue As String = DataGridView1.SelectedRows(0).Cells("ID").Value.ToString()
+            Dim selectedValue1 As String = DataGridView1.SelectedRows(0).Cells("NOMBRE_PRODUCTO").Value.ToString()
+            Dim selectedValue2 As String = DataGridView1.SelectedRows(0).Cells("precio_venta").Value.ToString()
 
             Dim form2 As New Form1()
 
@@ -51,7 +51,7 @@ Public Class Buscador
     'End Sub
 
     Private Sub Buscador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Actualizartabla(Me.DataGridView1, "productos", "", "id") 'tabla usuarios ordenado por apellido        ' Label9.Text = n
+        Actualizartabla(Me.DataGridView1, "productos", "", "id")
     End Sub
 
     Sub Actualizartabla(ByVal grilla As DataGridView,
@@ -89,8 +89,8 @@ Public Class Buscador
 
             DATO = TextBox1.Text & "%"
             '                   0                  1
-            SQL = "Select productos.nombre_producto, productos.APELLIDO, USUARIOS.NRO_CUENTA, USUARIOS.usuario From USUARIOS
-Where (((USUARIOS.nombre) Like '" & DATO & "'));"
+            SQL = "Select productos.nombre_producto From productos
+Where (((productos.nombre_producto) Like '" & DATO & "'));"
 
             Dim da As New OleDbDataAdapter(SQL, RutaDB_papeleria)
             Dim dt As New DataTable

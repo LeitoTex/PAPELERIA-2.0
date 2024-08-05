@@ -254,4 +254,7 @@ Public Class REGISTRAR_CLIENTES
 
     End Sub
 
+    Private Sub REGISTRAR_CLIENTES_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        MDI_Papeleria.MUESTRA()
+    End Sub
 End Class
