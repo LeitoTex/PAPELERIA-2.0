@@ -61,11 +61,19 @@
     End Sub
 
     Private Sub PROVEEDORToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PROVEEDORToolStripMenuItem.Click
+        Carga_formulario(REGISTRAR_PROVEEDORES)
+        oculta()
 
     End Sub
 
     Private Sub CLIENTEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CLIENTEToolStripMenuItem.Click
         Carga_formulario(REGISTRAR_CLIENTES)
+        oculta()
+
+    End Sub
+
+    Private Sub USUARIOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles USUARIOToolStripMenuItem.Click
+        Carga_formulario(REGISTRAR_USUARIOS)
         oculta()
 
     End Sub

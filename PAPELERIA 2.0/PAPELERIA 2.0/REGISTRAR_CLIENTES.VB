@@ -243,4 +243,17 @@ Public Class REGISTRAR_CLIENTES
     Private Sub REGISTRAR_CLIENTES_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         MDI_Papeleria.MUESTRA()
     End Sub
+
+    Private Sub TXT_NOMBRE_TextChanged(sender As Object, e As EventArgs) Handles TXT_NOMBRE.TextChanged
+
+    End Sub
+
+    Private Sub TXT_NOMBRE_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_NOMBRE.KeyPress
+        If InStr("0123456789" & Chr(8), e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+
+    End Sub
 End Class

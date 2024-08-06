@@ -31,11 +31,12 @@ Partial Class MDI_Papeleria
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.OtrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BTN_CONTADOS = New System.Windows.Forms.Button()
-        Me.BTN_CREDITO = New System.Windows.Forms.Button()
         Me.REGISTRARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PROVEEDORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CLIENTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BTN_CONTADOS = New System.Windows.Forms.Button()
+        Me.BTN_CREDITO = New System.Windows.Forms.Button()
+        Me.USUARIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -85,6 +86,25 @@ Partial Class MDI_Papeleria
         Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
         Me.ComprasToolStripMenuItem.Text = "Compras"
         '
+        'REGISTRARToolStripMenuItem
+        '
+        Me.REGISTRARToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PROVEEDORToolStripMenuItem, Me.CLIENTEToolStripMenuItem, Me.USUARIOToolStripMenuItem})
+        Me.REGISTRARToolStripMenuItem.Name = "REGISTRARToolStripMenuItem"
+        Me.REGISTRARToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
+        Me.REGISTRARToolStripMenuItem.Text = "REGISTRAR"
+        '
+        'PROVEEDORToolStripMenuItem
+        '
+        Me.PROVEEDORToolStripMenuItem.Name = "PROVEEDORToolStripMenuItem"
+        Me.PROVEEDORToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PROVEEDORToolStripMenuItem.Text = "PROVEEDOR"
+        '
+        'CLIENTEToolStripMenuItem
+        '
+        Me.CLIENTEToolStripMenuItem.Name = "CLIENTEToolStripMenuItem"
+        Me.CLIENTEToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CLIENTEToolStripMenuItem.Text = "CLIENTE"
+        '
         'BTN_CONTADOS
         '
         Me.BTN_CONTADOS.Location = New System.Drawing.Point(12, 46)
@@ -103,24 +123,11 @@ Partial Class MDI_Papeleria
         Me.BTN_CREDITO.Text = "CREDITO"
         Me.BTN_CREDITO.UseVisualStyleBackColor = True
         '
-        'REGISTRARToolStripMenuItem
+        'USUARIOToolStripMenuItem
         '
-        Me.REGISTRARToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PROVEEDORToolStripMenuItem, Me.CLIENTEToolStripMenuItem})
-        Me.REGISTRARToolStripMenuItem.Name = "REGISTRARToolStripMenuItem"
-        Me.REGISTRARToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
-        Me.REGISTRARToolStripMenuItem.Text = "REGISTRAR"
-        '
-        'PROVEEDORToolStripMenuItem
-        '
-        Me.PROVEEDORToolStripMenuItem.Name = "PROVEEDORToolStripMenuItem"
-        Me.PROVEEDORToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.PROVEEDORToolStripMenuItem.Text = "PROVEEDOR"
-        '
-        'CLIENTEToolStripMenuItem
-        '
-        Me.CLIENTEToolStripMenuItem.Name = "CLIENTEToolStripMenuItem"
-        Me.CLIENTEToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CLIENTEToolStripMenuItem.Text = "CLIENTE"
+        Me.USUARIOToolStripMenuItem.Name = "USUARIOToolStripMenuItem"
+        Me.USUARIOToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.USUARIOToolStripMenuItem.Text = "USUARIO"
         '
         'MDI_Papeleria
         '
@@ -156,4 +163,5 @@ Partial Class MDI_Papeleria
     Friend WithEvents REGISTRARToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PROVEEDORToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CLIENTEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents USUARIOToolStripMenuItem As ToolStripMenuItem
 End Class

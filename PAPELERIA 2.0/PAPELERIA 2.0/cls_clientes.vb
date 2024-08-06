@@ -1,19 +1,13 @@
 ﻿Imports System.Data.OleDb
 Imports System.IO
-
-
 Public Class Cls_clientes
     Dim ComandoSql As OleDbCommand
     Dim Sql As String
-
-
     Function Agregaclientes(ByVal nombre As String, ByVal domicilio As String,
                            ByVal rut As String) As Boolean
         Dim con As New OleDbConnection(RutaDB_papeleria)
         con.Open()
-
         Try
-
             Sql = "Insert into clientes (nombre, domicilio, rut) " _
             + "Values (@nombre,@domicilio,@rut)"
 

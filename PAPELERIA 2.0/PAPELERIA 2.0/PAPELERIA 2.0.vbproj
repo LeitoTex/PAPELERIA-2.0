@@ -98,6 +98,7 @@
     <Compile Include="cls_productos.vb" />
     <Compile Include="cls_clientes.vb" />
     <Compile Include="cls_proveedores.vb" />
+    <Compile Include="cls_usuarios.vb" />
     <Compile Include="COMPRAS.Designer.VB">
       <DependentUpon>COMPRAS.VB</DependentUpon>
     </Compile>
@@ -169,6 +170,12 @@
     <Compile Include="REGISTRAR_PROVEEDORES.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="REGISTRAR_USUARIOS.Designer.vb">
+      <DependentUpon>REGISTRAR_USUARIOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REGISTRAR_USUARIOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="buscador.resx">
@@ -203,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="REGISTRAR_PROVEEDORES.resx">
       <DependentUpon>REGISTRAR_PROVEEDORES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REGISTRAR_USUARIOS.resx">
+      <DependentUpon>REGISTRAR_USUARIOS.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

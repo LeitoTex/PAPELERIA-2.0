@@ -1,9 +1,8 @@
-﻿
+﻿Imports System.Data.OleDb
+Public Class REGISTRAR_USUARIOS
 
-Imports System.Data.OleDb
-Public Class REGISTRAR_PROVEEDORES
 
-    Dim obj_proveedores As New cls_proveedores
+    Dim obj_USUARIOS As New cls_usuarios
     Dim n As Integer
     Dim ini As Integer
     Dim f As Integer
@@ -20,7 +19,7 @@ Public Class REGISTRAR_PROVEEDORES
     Sub LimpiarCampos()
         TXT_NOMBRE.Text = ""
         TXT_domicilio.Text = ""
-        txt_RUT.Text = ""
+        txt_CONTRASEÑA.Text = ""
         TXT_NOMBRE.Focus()
     End Sub
 
@@ -42,15 +41,15 @@ Public Class REGISTRAR_PROVEEDORES
         End If
 
         If TXT_domicilio.Text.Trim = "" Then
-            MsgBox("error en el ...")
+            MsgBox("error en el apellido...")
             TXT_domicilio.Focus()
             Return False
             Exit Function
         End If
 
-        If txt_RUT.Text.Trim = "" Then
-            MsgBox("error en el RUT...")
-            TXT_NOMBRE.Focus()
+        If txt_CONTRASEÑA.Text.Trim = "" Then
+            MsgBox("error en el usuario...")
+            txtUsuario.Focus()
             Return False
             Exit Function
         End If
@@ -72,10 +71,8 @@ Public Class REGISTRAR_PROVEEDORES
 
     Private Sub NUEVO_USUARIO_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ini = 0
-        ActualizarTabla(Me.DGV1, "proveedores", "", "nombre")
+        ActualizarTabla(Me.DGV1, "usuarios", "", "nombre")
         Pinta_fila(ini)
-
-
     End Sub
 
     Sub ActualizarTabla(ByVal grilla As DataGridView, ByVal nombre_tabla As String,
@@ -97,7 +94,7 @@ Public Class REGISTRAR_PROVEEDORES
             n = dt.Rows.Count
 
             grilla.DataSource = dt
-            grilla.ReadOnly = True
+            grilla.ReadOnly = True 'SOLO DE LECTURA
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -123,11 +120,11 @@ Public Class REGISTRAR_PROVEEDORES
     Private Sub BTN_AGREGAR_Click(sender As Object, e As EventArgs) Handles BTN_AGREGAR.Click
         Try
             If ValidarDatos() Then
-                If obj_proveedores.Agrega_proveedores(TXT_NOMBRE.Text, TXT_domicilio.Text, txt_RUT.Text) = True Then
+                If obj_USUARIOS.Agrega_usuarios(TXT_NOMBRE.Text, TXT_domicilio.Text, txt_CONTRASEÑA.Text, cmb_tipo.Text) = True Then
 
                     MsgBox("Registro ingresado satisfactoriamente", MsgBoxStyle.Information, "Confirmacion")
                     Me.LimpiarCampos()
-                    ActualizarTabla(Me.DGV1, "proveedores", "", "nombre")
+                    ActualizarTabla(Me.DGV1, "usuarios", "", "nombre")
                 Else
                     MsgBox("Error al ingresar el registro, reintente la accion", MsgBoxStyle.Critical, "Error")
                 End If
@@ -150,7 +147,7 @@ Public Class REGISTRAR_PROVEEDORES
             id = ObtenerCampo(Me.DGV1, 0)
             TXT_NOMBRE.Text = ObtenerCampo(Me.DGV1, 1)
             TXT_domicilio.Text = ObtenerCampo(Me.DGV1, 2)
-            txt_RUT.Text = ObtenerCampo(Me.DGV1, 3)
+            txt_CONTRASEÑA.Text = ObtenerCampo(Me.DGV1, 3)
 
             BTN_NUEVO.Enabled = False
             BTN_AGREGAR.Enabled = False
@@ -159,9 +156,7 @@ Public Class REGISTRAR_PROVEEDORES
             ' txtNombre.Focus()
             '   Label6.Text = dgv1.CurrentRow.Index + 1
             'ini = dgv1.CurrentRow.Index
-
         End If
-
     End Sub
 
     Private Sub BTN_MODIFICAR_Click(sender As Object, e As EventArgs) Handles BTN_MODIFICAR.Click
@@ -169,13 +164,13 @@ Public Class REGISTRAR_PROVEEDORES
             Dim i = MsgBox("¿Desea modificar ese registro?", MsgBoxStyle.Critical + MsgBoxStyle.YesNo, "Confirmación")
             If i = MsgBoxResult.Yes Then
                 If ValidarDatos() Then
-                    If obj_proveedores.Modifica_proveedores(TXT_NOMBRE.Text,
-                                                     TXT_domicilio.Text,
-                                                     txt_RUT.Text,
-                                                     id) = True Then
+                    If obj_USUARIOS.Modifica_usuarios(TXT_NOMBRE.Text,
+                                                         TXT_domicilio.Text,
+                                                         txtUsuario.Text,
+                                                         id) = True Then
                         MsgBox("Registro actualizado satisfactoriamente", MsgBoxStyle.Information, "Confirmacion")
                         Me.LimpiarCampos()
-                        ActualizarTabla(Me.DGV1, "proveedores", "", "id")
+                        ActualizarTabla(Me.DGV1, "usuarios", "", "id")
 
                         Me.ModoInsercion()
                     Else
@@ -205,14 +200,14 @@ Public Class REGISTRAR_PROVEEDORES
     End Sub
 
     Private Sub BTN_ELIMINAR_Click(sender As Object, e As EventArgs) Handles BTN_ELIMINAR.Click
-        Dim i = MsgBox("¿Desea eliminar este proveedor?", MsgBoxStyle.Critical + MsgBoxStyle.YesNo, "Confirmación")
+        Dim i = MsgBox("¿Desea eliminar este usuario?", MsgBoxStyle.Critical + MsgBoxStyle.YesNo, "Confirmación")
         If i = MsgBoxResult.Yes Then
             Try
 
-                If obj_proveedores.Elimina_proveedores(id) = True Then
+                If obj_USUARIOS.Elimina_usuarios(id) = True Then
                     MsgBox("Registro Eliminado satisfactoriamente", MsgBoxStyle.Information, "Confirmacion")
                     Me.LimpiarCampos()
-                    ActualizarTabla(Me.DGV1, "proveedores", "", "id")
+                    ActualizarTabla(Me.DGV1, "usuarios", "", "id")
                     Me.ModoInsercion()
                     Me.LimpiarCampos()
                 Else
@@ -232,35 +227,27 @@ Public Class REGISTRAR_PROVEEDORES
             BTN_AGREGAR.Enabled = True
             BTN_NUEVO.Enabled = False
             BTN_ELIMINAR.Enabled = False
-
             LimpiarCampos()
 
         Catch ex As Exception
             MsgBox(ex.Message)
 
         End Try
-
     End Sub
 
     Private Sub BTN_FIN_Click(sender As Object, e As EventArgs) Handles BTN_FIN.Click
         Me.Close()
-        MDI_Papeleria.MUESTRA()
-
-    End Sub
-
-    Private Sub DGV1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV1.CellContentClick
-
     End Sub
 
     Private Sub REGISTRAR_CLIENTES_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         MDI_Papeleria.MUESTRA()
     End Sub
 
-    Private Sub txt_RUT_TextChanged(sender As Object, e As EventArgs) Handles txt_RUT.TextChanged
+    Private Sub TXT_NOMBRE_TextChanged(sender As Object, e As EventArgs) Handles TXT_NOMBRE.TextChanged
 
     End Sub
 
-    Private Sub txt_RUT_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_RUT.KeyPress
+    Private Sub TXT_NOMBRE_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_NOMBRE.KeyPress
         If InStr("0123456789" & Chr(8), e.KeyChar) Then
             e.Handled = False
         Else
@@ -268,4 +255,5 @@ Public Class REGISTRAR_PROVEEDORES
         End If
 
     End Sub
+
 End Class

@@ -146,24 +146,21 @@
     End Sub
 
     Private Sub TXT_NOMBRE_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_NOMBRE.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
+        If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
-            'ENVIAR ESA PULSACIÓN
             SendKeys.Send("{tab}")
         End If
     End Sub
 
     Private Sub TXT_DOMICILIO_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_DOMICILIO.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
+        If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
-            'ENVIAR ESA PULSACIÓN
             SendKeys.Send("{tab}")
         End If
     End Sub
     Private Sub TXT_RUT_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_RUT.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
+        If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
-            'ENVIAR ESA PULSACIÓN
             SendKeys.Send("{tab}")
         End If
     End Sub
@@ -171,7 +168,6 @@
     Private Sub TXT_CODIGO_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_CODIGO.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
             e.Handled = True
-            'ENVIAR ESA PULSACIÓN
             SendKeys.Send("{tab}")
         End If
     End Sub
@@ -179,7 +175,6 @@
     Private Sub TXT_CUENTA_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_CUENTA.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
             e.Handled = True
-            'ENVIAR ESA PULSACIÓN
             SendKeys.Send("{tab}")
         End If
     End Sub
@@ -187,7 +182,6 @@
     Private Sub TXT_DESCRIPCION_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_DESCRIPCION.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
             e.Handled = True
-            'ENVIAR ESA PULSACIÓN
             SendKeys.Send("{tab}")
         End If
     End Sub
@@ -195,20 +189,19 @@
     Private Sub TXT_DESCUENTO_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_DESCUENTO.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
             e.Handled = True
-            'ENVIAR ESA PULSACIÓN
             SendKeys.Send("{tab}")
         End If
     End Sub
 
     Private Sub TXT_IMPORTE_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_IMPORTE.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
+        If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
             SendKeys.Send("{tab}")
         End If
     End Sub
 
     Private Sub BTN_AGREGA_KeyPress(sender As Object, e As KeyPressEventArgs) Handles BTN_AGREGA.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
+        If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
             BTN_AGREGA_Click(Nothing, Nothing)
         End If
@@ -226,6 +219,7 @@
         Dim form2 As New Buscador()
         form2.ShowDialog()
     End Sub
+
 
 End Class
 

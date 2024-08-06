@@ -30,7 +30,6 @@ C:\Users\Equipo\OneDrive\Escritorio\Prog Libreria\PAPELERIA 2.0-20240628T195340Z
 C:\Users\Equipo\OneDrive\Escritorio\Prog Libreria\PAPELERIA 2.0-20240628T195340Z-001\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.xml
 C:\Users\Equipo\OneDrive\Escritorio\Prog Libreria\PAPELERIA 2.0-20240628T195340Z-001\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.pdb
 C:\Users\Equipo\OneDrive\Escritorio\Prog Libreria\PAPELERIA 2.0-20240628T195340Z-001\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.MDI_Papeleria.resources
-C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\bin\Debug\papeleria.accdb
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.vbproj.AssemblyReference.cache
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.Buscador.resources
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.creditos.resources
@@ -50,4 +49,5 @@ C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELE
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.pdb
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.COMPRAS.resources
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.Productos.resources
-C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.REGISTRAR_PROEEDORES.resources
+C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.REGISTRAR_PROVEEDORES.resources
+C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.REGISTRAR_USUARIOS.resources
