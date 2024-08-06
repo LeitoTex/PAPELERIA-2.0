@@ -35,13 +35,15 @@ Partial Class REGISTRAR_CLIENTES
         Me.txt_RUT = New System.Windows.Forms.TextBox()
         Me.TXT_domicilio = New System.Windows.Forms.TextBox()
         Me.TXT_NOMBRE = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.DGV1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(89, 150)
+        Me.Label3.Location = New System.Drawing.Point(37, 106)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(30, 13)
         Me.Label3.TabIndex = 33
@@ -50,7 +52,7 @@ Partial Class REGISTRAR_CLIENTES
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(89, 111)
+        Me.Label2.Location = New System.Drawing.Point(37, 67)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(62, 13)
         Me.Label2.TabIndex = 32
@@ -59,7 +61,7 @@ Partial Class REGISTRAR_CLIENTES
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(89, 71)
+        Me.Label1.Location = New System.Drawing.Point(37, 27)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(54, 13)
         Me.Label1.TabIndex = 31
@@ -86,7 +88,7 @@ Partial Class REGISTRAR_CLIENTES
         '
         'BTN_ELIMINAR
         '
-        Me.BTN_ELIMINAR.Location = New System.Drawing.Point(472, 150)
+        Me.BTN_ELIMINAR.Location = New System.Drawing.Point(420, 106)
         Me.BTN_ELIMINAR.Name = "BTN_ELIMINAR"
         Me.BTN_ELIMINAR.Size = New System.Drawing.Size(80, 24)
         Me.BTN_ELIMINAR.TabIndex = 28
@@ -104,7 +106,7 @@ Partial Class REGISTRAR_CLIENTES
         '
         'BTN_MODIFICAR
         '
-        Me.BTN_MODIFICAR.Location = New System.Drawing.Point(472, 120)
+        Me.BTN_MODIFICAR.Location = New System.Drawing.Point(420, 76)
         Me.BTN_MODIFICAR.Name = "BTN_MODIFICAR"
         Me.BTN_MODIFICAR.Size = New System.Drawing.Size(80, 24)
         Me.BTN_MODIFICAR.TabIndex = 26
@@ -113,7 +115,7 @@ Partial Class REGISTRAR_CLIENTES
         '
         'BTN_AGREGAR
         '
-        Me.BTN_AGREGAR.Location = New System.Drawing.Point(472, 90)
+        Me.BTN_AGREGAR.Location = New System.Drawing.Point(420, 46)
         Me.BTN_AGREGAR.Name = "BTN_AGREGAR"
         Me.BTN_AGREGAR.Size = New System.Drawing.Size(80, 24)
         Me.BTN_AGREGAR.TabIndex = 25
@@ -122,7 +124,7 @@ Partial Class REGISTRAR_CLIENTES
         '
         'BTN_NUEVO
         '
-        Me.BTN_NUEVO.Location = New System.Drawing.Point(472, 60)
+        Me.BTN_NUEVO.Location = New System.Drawing.Point(420, 16)
         Me.BTN_NUEVO.Name = "BTN_NUEVO"
         Me.BTN_NUEVO.Size = New System.Drawing.Size(80, 24)
         Me.BTN_NUEVO.TabIndex = 23
@@ -131,48 +133,60 @@ Partial Class REGISTRAR_CLIENTES
         '
         'txt_RUT
         '
-        Me.txt_RUT.Location = New System.Drawing.Point(171, 147)
+        Me.txt_RUT.Location = New System.Drawing.Point(119, 103)
         Me.txt_RUT.Name = "txt_RUT"
         Me.txt_RUT.Size = New System.Drawing.Size(216, 20)
         Me.txt_RUT.TabIndex = 21
         '
         'TXT_domicilio
         '
-        Me.TXT_domicilio.Location = New System.Drawing.Point(171, 108)
+        Me.TXT_domicilio.Location = New System.Drawing.Point(119, 64)
         Me.TXT_domicilio.Name = "TXT_domicilio"
         Me.TXT_domicilio.Size = New System.Drawing.Size(216, 20)
         Me.TXT_domicilio.TabIndex = 20
         '
         'TXT_NOMBRE
         '
-        Me.TXT_NOMBRE.Location = New System.Drawing.Point(171, 68)
+        Me.TXT_NOMBRE.Location = New System.Drawing.Point(119, 24)
         Me.TXT_NOMBRE.Name = "TXT_NOMBRE"
         Me.TXT_NOMBRE.Size = New System.Drawing.Size(216, 20)
         Me.TXT_NOMBRE.TabIndex = 19
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.BTN_ELIMINAR)
+        Me.GroupBox1.Controls.Add(Me.BTN_MODIFICAR)
+        Me.GroupBox1.Controls.Add(Me.BTN_AGREGAR)
+        Me.GroupBox1.Controls.Add(Me.BTN_NUEVO)
+        Me.GroupBox1.Controls.Add(Me.txt_RUT)
+        Me.GroupBox1.Controls.Add(Me.TXT_domicilio)
+        Me.GroupBox1.Controls.Add(Me.TXT_NOMBRE)
+        Me.GroupBox1.Location = New System.Drawing.Point(52, 44)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(553, 162)
+        Me.GroupBox1.TabIndex = 34
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GroupBox1"
         '
         'REGISTRAR_CLIENTES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DGV1)
         Me.Controls.Add(Me.BTN_FIN)
-        Me.Controls.Add(Me.BTN_ELIMINAR)
         Me.Controls.Add(Me.BTN_CANCELAR)
-        Me.Controls.Add(Me.BTN_MODIFICAR)
-        Me.Controls.Add(Me.BTN_AGREGAR)
-        Me.Controls.Add(Me.BTN_NUEVO)
-        Me.Controls.Add(Me.txt_RUT)
-        Me.Controls.Add(Me.TXT_domicilio)
-        Me.Controls.Add(Me.TXT_NOMBRE)
         Me.Name = "REGISTRAR_CLIENTES"
         Me.Text = "REGISTRAR_CLIENTES"
         CType(Me.DGV1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label3 As Label
@@ -188,4 +202,5 @@ Partial Class REGISTRAR_CLIENTES
     Friend WithEvents txt_RUT As TextBox
     Friend WithEvents TXT_domicilio As TextBox
     Friend WithEvents TXT_NOMBRE As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

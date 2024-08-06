@@ -50,3 +50,4 @@ C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELE
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA 2.0.pdb
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.COMPRAS.resources
 C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.Productos.resources
+C:\Users\lucas\OneDrive\Desktop\GIT\PAPELERIA 2.0\PAPELERIA 2.0\obj\Debug\PAPELERIA_2._0.REGISTRAR_PROEEDORES.resources

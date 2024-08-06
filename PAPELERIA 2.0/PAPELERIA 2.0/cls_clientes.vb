@@ -8,8 +8,8 @@ Public Class Cls_clientes
 
 
     Function Agregaclientes(ByVal nombre As String, ByVal domicilio As String,
-                           ByVal rut As String, value As Date) As Boolean
-        Dim con As New OleDbConnection(RutaDB_papeleria) 'APUNTA A LA BASE DE DATOS.. CON = CONEXION 
+                           ByVal rut As String) As Boolean
+        Dim con As New OleDbConnection(RutaDB_papeleria)
         con.Open()
 
         Try
