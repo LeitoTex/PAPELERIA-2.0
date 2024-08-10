@@ -116,6 +116,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ESTADOS_DE_CUENTA.Designer.VB">
+      <DependentUpon>ESTADOS_DE_CUENTA.VB</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADOS_DE_CUENTA.VB">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LOGIN.Designer.vb">
       <DependentUpon>LOGIN.vb</DependentUpon>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="creditos.resx">
       <DependentUpon>creditos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ESTADOS_DE_CUENTA.resx">
+      <DependentUpon>ESTADOS_DE_CUENTA.VB</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

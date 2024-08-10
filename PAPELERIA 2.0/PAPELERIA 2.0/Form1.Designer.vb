@@ -53,11 +53,9 @@ Partial Class FORM1
         Me.BTN_ELIMINA = New System.Windows.Forms.Button()
         Me.BTN_AGREGA = New System.Windows.Forms.Button()
         Me.TXT_CANTIDAD = New System.Windows.Forms.TextBox()
-        Me.TXT_PRECIO = New System.Windows.Forms.TextBox()
         Me.TXT_DESCRIPCION = New System.Windows.Forms.TextBox()
         Me.TXT_CODIGO = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -70,6 +68,8 @@ Partial Class FORM1
         Me.Label19 = New System.Windows.Forms.Label()
         Me.BTN_ACEPTAR = New System.Windows.Forms.Button()
         Me.BTN_CANCELAR = New System.Windows.Forms.Button()
+        Me.TXT_PRECIO = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label15
@@ -321,17 +321,10 @@ Partial Class FORM1
         '
         'TXT_CANTIDAD
         '
-        Me.TXT_CANTIDAD.Location = New System.Drawing.Point(310, 131)
+        Me.TXT_CANTIDAD.Location = New System.Drawing.Point(429, 131)
         Me.TXT_CANTIDAD.Name = "TXT_CANTIDAD"
         Me.TXT_CANTIDAD.Size = New System.Drawing.Size(69, 20)
-        Me.TXT_CANTIDAD.TabIndex = 9
-        '
-        'TXT_PRECIO
-        '
-        Me.TXT_PRECIO.Location = New System.Drawing.Point(395, 131)
-        Me.TXT_PRECIO.Name = "TXT_PRECIO"
-        Me.TXT_PRECIO.Size = New System.Drawing.Size(87, 20)
-        Me.TXT_PRECIO.TabIndex = 10
+        Me.TXT_CANTIDAD.TabIndex = 10
         '
         'TXT_DESCRIPCION
         '
@@ -350,20 +343,11 @@ Partial Class FORM1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(307, 113)
+        Me.Label4.Location = New System.Drawing.Point(426, 113)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(62, 13)
         Me.Label4.TabIndex = 67
         Me.Label4.Text = "CANTIDAD"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(392, 113)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(47, 13)
-        Me.Label3.TabIndex = 66
-        Me.Label3.Text = "PRECIO"
         '
         'Label2
         '
@@ -469,11 +453,29 @@ Partial Class FORM1
         Me.BTN_CANCELAR.Text = "CANCELAR"
         Me.BTN_CANCELAR.UseVisualStyleBackColor = True
         '
+        'TXT_PRECIO
+        '
+        Me.TXT_PRECIO.Location = New System.Drawing.Point(320, 131)
+        Me.TXT_PRECIO.Name = "TXT_PRECIO"
+        Me.TXT_PRECIO.Size = New System.Drawing.Size(87, 20)
+        Me.TXT_PRECIO.TabIndex = 9
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(317, 113)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(47, 13)
+        Me.Label3.TabIndex = 115
+        Me.Label3.Text = "PRECIO"
+        '
         'FORM1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(840, 499)
+        Me.Controls.Add(Me.TXT_PRECIO)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BTN_CANCELAR)
         Me.Controls.Add(Me.BTN_ACEPTAR)
         Me.Controls.Add(Me.Label19)
@@ -510,11 +512,9 @@ Partial Class FORM1
         Me.Controls.Add(Me.BTN_ELIMINA)
         Me.Controls.Add(Me.BTN_AGREGA)
         Me.Controls.Add(Me.TXT_CANTIDAD)
-        Me.Controls.Add(Me.TXT_PRECIO)
         Me.Controls.Add(Me.TXT_DESCRIPCION)
         Me.Controls.Add(Me.TXT_CODIGO)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Name = "FORM1"
         Me.Text = "Form1"
@@ -554,11 +554,9 @@ Partial Class FORM1
     Friend WithEvents BTN_ELIMINA As Button
     Friend WithEvents BTN_AGREGA As Button
     Friend WithEvents TXT_CANTIDAD As TextBox
-    Friend WithEvents TXT_PRECIO As TextBox
     Friend WithEvents TXT_DESCRIPCION As TextBox
     Friend WithEvents TXT_CODIGO As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label16 As Label
@@ -571,4 +569,6 @@ Partial Class FORM1
     Friend WithEvents Label19 As Label
     Friend WithEvents BTN_ACEPTAR As Button
     Friend WithEvents BTN_CANCELAR As Button
+    Friend WithEvents TXT_PRECIO As TextBox
+    Friend WithEvents Label3 As Label
 End Class

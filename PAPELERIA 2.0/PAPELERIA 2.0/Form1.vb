@@ -1,4 +1,8 @@
 ﻿Public Class FORM1
+    Public Property id As String
+
+
+    Public Property Articulos As List(Of String())
 
     Dim descuento As Double
     Dim subtotal As Double = 0
@@ -38,7 +42,7 @@
         Return False
     End Function
 
-    Private Sub TXT_PRECIO_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_PRECIO.KeyPress
+    Private Sub TXT_PRECIO_KeyPress(sender As Object, e As KeyPressEventArgs)
         If InStr("0123456789" & Chr(8), e.KeyChar) Then
             e.Handled = False
         Else
@@ -59,9 +63,8 @@
         End If
         If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
             e.Handled = True
-            'ENVIAR ESA PULSACIÓN
-            SendKeys.Send("{tab}")
         End If
+
     End Sub
 
     Private Sub BTN_AGREGA_Click(sender As Object, e As EventArgs) Handles BTN_AGREGA.Click
@@ -220,6 +223,12 @@
         form2.ShowDialog()
     End Sub
 
+    Private Sub FORM1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub TXT_CANTIDAD_TextChanged(sender As Object, e As EventArgs) Handles TXT_CANTIDAD.TextChanged
+
+    End Sub
 End Class
 

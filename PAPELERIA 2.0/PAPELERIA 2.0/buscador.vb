@@ -8,16 +8,15 @@ Public Class Buscador
         If DataGridView1.SelectedRows.Count > 0 Then
             ' Obtén el valor de la celda seleccionada
             Dim selectedValue As String = DataGridView1.SelectedRows(0).Cells("ID").Value.ToString()
-            Dim selectedValue1 As String = DataGridView1.SelectedRows(0).Cells("NOMBRE_PRODUCTO").Value.ToString()
-            Dim selectedValue2 As String = DataGridView1.SelectedRows(0).Cells("precio_venta").Value.ToString()
+            Dim selectedValue1 As String = DataGridView1.SelectedRows(0).Cells("descripcion").Value.ToString()
+            Dim selectedValue2 As String = DataGridView1.SelectedRows(0).Cells("precio venta").Value.ToString()
 
-            Dim form2 As New Form1()
+            Dim form2 As New FORM1()
 
             ' Establece el valor en la propiedad del segundo formulario
             form2.TXT_CODIGO.Text = selectedValue
             form2.TXT_DESCRIPCION.Text = selectedValue1
             form2.TXT_PRECIO.Text = selectedValue2
-
 
             ' Muestra el segundo formulario
             form2.ShowDialog()
@@ -89,8 +88,8 @@ Public Class Buscador
 
             DATO = TextBox1.Text & "%"
             '                   0                  1
-            SQL = "Select productos.nombre_producto From productos
-Where (((productos.nombre_producto) Like '" & DATO & "'));"
+            SQL = "Select productos.nombre producto From productos
+Where (((productos.nombre producto) Like '" & DATO & "'));"
 
             Dim da As New OleDbDataAdapter(SQL, RutaDB_papeleria)
             Dim dt As New DataTable
