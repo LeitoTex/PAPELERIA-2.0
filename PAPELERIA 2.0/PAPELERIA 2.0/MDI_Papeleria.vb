@@ -4,17 +4,17 @@
     Private Sub MDI_Papeleria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LOGIN.Close()
     End Sub
-    Private Function Carga_formulario(ByVal form As Form) As Boolean
-        For Each f As Form In Application.OpenForms
-            If f.Name = form.Name Then
-                form.Select()
-                Return False
-            End If
-        Next
-        form.MdiParent = Me
-        form.Show()
-        Return True
-    End Function
+    'Private Function Carga_formulario(ByVal form As Form) As Boolean
+    '    For Each f As Form In Application.OpenForms
+    '        If f.Name = form.Name Then
+    '            form.Select()
+    '            Return False
+    '        End If
+    '    Next
+    '    form.MdiParent = Me
+    '    form.Show()
+    '    Return True
+    'End Function
     Sub oculta()
         btn_lgout.Hide()
         BTN_CONTADOS.Hide()
@@ -36,7 +36,7 @@
     End Sub
 
     Private Sub BTN_CONTADOS_Click(sender As Object, e As EventArgs) Handles BTN_CONTADOS.Click
-        Carga_formulario(Form1)
+        Carga_formulario(FORM1)
         oculta()
 
     End Sub

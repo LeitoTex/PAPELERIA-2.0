@@ -1,6 +1,6 @@
 ﻿Public Class FORM1
     Public Property id As String
-
+    Private m_ChildFormNumber As Integer
 
     Public Property Articulos As List(Of String())
 
@@ -10,17 +10,17 @@
     Dim total As Double
     Dim A As Double
     Dim FILA_p_EDITAR As Double
-    Private Function Carga_formulario(ByVal form As Form) As Boolean
-        For Each f As Form In Application.OpenForms
-            If f.Name = form.Name Then
-                form.Select()
-                Return False
-            End If
-        Next
-        form.MdiParent = Me
-        form.Show()
-        Return True
-    End Function
+    'Private Function Carga_formulario(ByVal form As Form) As Boolean
+    '    For Each f As Form In Application.OpenForms
+    '        If f.Name = form.Name Then
+    '            form.Select()
+    '            Return False
+    '        End If
+    '    Next
+    '    form.MdiParent = Me
+    '    form.Show()
+    '    Return True
+    'End Function
     Private Function CHEQUEA_CODIGO(ByVal CODIGO As String) As Boolean
         Dim fila As Byte = 0
 

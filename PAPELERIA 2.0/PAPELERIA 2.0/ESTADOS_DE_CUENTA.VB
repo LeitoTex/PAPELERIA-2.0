@@ -32,7 +32,7 @@ From MOVIMIENTOS
 Where (((MOVIMIENTOS.NRO_NOMBRE) = " & LBL_NUMERO_CUENTA.Text & "))
 Order By MOVIMIENTOS.FECHA DESC;"
 
-            da = New OleDbDataAdapter(consulta, RutaDB_cajero)
+            da = New OleDbDataAdapter(consulta, RutaDB_papeleria)
             dt = New DataTable
             da.Fill(dt)
             n = dt.Rows.Count
@@ -178,5 +178,4 @@ Where (((USUARIOS.nombre) Like '" & DATO & "'));"
     Private Sub CMB_TIPO_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CMB_TIPO_OPERACION.SelectedIndexChanged
         BTN_BUSCAR.Enabled = True
     End Sub
-End Class
 End Class
