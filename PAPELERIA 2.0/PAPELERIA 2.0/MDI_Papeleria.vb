@@ -36,7 +36,7 @@
     End Sub
 
     Private Sub BTN_CONTADOS_Click(sender As Object, e As EventArgs) Handles BTN_CONTADOS.Click
-        Carga_formulario(FORM1)
+        Carga_formulario(CONTADOS)
         oculta()
 
     End Sub

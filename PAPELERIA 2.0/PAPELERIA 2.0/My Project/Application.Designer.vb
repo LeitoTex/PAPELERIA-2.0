@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.PAPELERIA_2._0.MDI_Papeleria
+            Me.MainForm = Global.PAPELERIA_2._0.CONTADOS
         End Sub
     End Class
 End Namespace

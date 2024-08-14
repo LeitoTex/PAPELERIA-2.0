@@ -95,6 +95,12 @@
     <Compile Include="buscador.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BUSCADOR_CLIENTES.Designer.VB">
+      <DependentUpon>BUSCADOR_CLIENTES.VB</DependentUpon>
+    </Compile>
+    <Compile Include="BUSCADOR_CLIENTES.VB">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="cls_productos.vb" />
     <Compile Include="cls_clientes.vb" />
     <Compile Include="cls_proveedores.vb" />
@@ -128,11 +134,11 @@
     <Compile Include="LOGIN.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="CONTADOS.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="CONTADOS.Designer.vb">
+      <DependentUpon>CONTADOS.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MDI_Papeleria.Designer.vb">
@@ -187,6 +193,9 @@
     <EmbeddedResource Include="buscador.resx">
       <DependentUpon>buscador.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUSCADOR_CLIENTES.resx">
+      <DependentUpon>BUSCADOR_CLIENTES.VB</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="COMPRAS.resx">
       <DependentUpon>COMPRAS.VB</DependentUpon>
     </EmbeddedResource>
@@ -196,8 +205,8 @@
     <EmbeddedResource Include="ESTADOS_DE_CUENTA.resx">
       <DependentUpon>ESTADOS_DE_CUENTA.VB</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="CONTADOS.resx">
+      <DependentUpon>CONTADOS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.vb</DependentUpon>

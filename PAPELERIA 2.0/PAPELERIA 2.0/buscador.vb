@@ -1,53 +1,16 @@
 ﻿Imports System.Data.OleDb
 Public Class Buscador
-    Dim n As Integer
 
+    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
 
-    Private Sub Btn_agrega_Click(sender As Object, e As EventArgs) Handles btn_agrega.Click
-        ' Asegúrate de que se ha seleccionado una fila en el DataGridView
         If DataGridView1.SelectedRows.Count > 0 Then
-            ' Obtén el valor de la celda seleccionada
             Dim selectedValue As String = DataGridView1.SelectedRows(0).Cells("ID").Value.ToString()
             Dim selectedValue1 As String = DataGridView1.SelectedRows(0).Cells("descripcion").Value.ToString()
             Dim selectedValue2 As String = DataGridView1.SelectedRows(0).Cells("precio venta").Value.ToString()
-
-            Dim form2 As New FORM1()
-
-            ' Establece el valor en la propiedad del segundo formulario
-            form2.TXT_CODIGO.Text = selectedValue
-            form2.TXT_DESCRIPCION.Text = selectedValue1
-            form2.TXT_PRECIO.Text = selectedValue2
-
-            ' Muestra el segundo formulario
-            form2.ShowDialog()
-        Else
-            MessageBox.Show("Por favor, selecciona una fila.")
+            CONTADOS.RecibirDatos(selectedValue, selectedValue1, selectedValue2)
+            creditos.RecibirDatos(selectedValue, selectedValue1, selectedValue2)
         End If
     End Sub
-
-    '  Sub ActualizarTabla(ByVal grilla As DataGridView)
-
-    '  Dim da1 As OleDbDataAdapter 'DATAADPTER
-    ' Dim dt1 As DataTable
-    'Dim consulta As String 'f9
-
-    'Try
-
-    '       consulta = " SELECT productos.[Id], productos.[descripcion], productos.[precio venta]
-    'FROM productos; "
-
-    '           da1 = New OleDbDataAdapter(consulta, RutaDB_papeleria)
-    '          dt1 = New DataTable
-    '         da1.Fill(dt1)
-    '        n = dt1.Rows.Count
-
-    '       grilla.DataSource = dt1
-    '      grilla.ReadOnly = True 'SOLO DE LECTURA
-    'Catch ex As Exception
-    '       MsgBox(ex.Message)
-    'End Try
-
-    'End Sub
 
     Private Sub Buscador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Actualizartabla(Me.DataGridView1, "productos", "", "id")
@@ -72,13 +35,10 @@ Public Class Buscador
             dt = New DataTable
             da.Fill(dt)
             grilla.DataSource = dt
-            grilla.ReadOnly = True 'SOLO DE LECTURA
-
-
+            grilla.ReadOnly = True
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
@@ -107,10 +67,7 @@ Where (((productos.nombre producto) Like '" & DATO & "'));"
             MsgBox(ex.Message)
         End Try
     End Sub
-
-
-    '  Private Sub Btn_carga_Click(sender As Object, e As EventArgs) Handles btn_carga.Click
-    '     Carga_productos(DataGridView1, "Productos", "Id,descripcion,precioventa", "Id")
-
-    ' End Sub
+    Private Sub btn_agrega_Click(sender As Object, e As EventArgs) Handles btn_agrega.Click
+        Me.Close()
+    End Sub
 End Class
