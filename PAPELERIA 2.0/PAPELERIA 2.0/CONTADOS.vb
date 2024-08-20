@@ -125,9 +125,7 @@
         ElseIf (e.CurrentValue = CheckState.Checked) Then
             A = A - Val(ListView1.Items(e.Index).SubItems(5).Text)
         End If
-
     End Sub
-
     Private Sub TXT_NOMBRE_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_NOMBRE.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
@@ -204,17 +202,12 @@
         TXT_NOMBRE.Text = selectedvalue1
         TXT_DOMICILIO.Text = selectedvalue2
         TXT_RUT.Text = selectedvalue3
-
-
         TXT_CODIGO.Focus()
-
     End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim form2 As New Buscador()
         form2.ShowDialog()
         TXT_CANTIDAD.Focus()
-
     End Sub
 
     Private Sub BTN_CUENTA_Click(sender As Object, e As EventArgs) Handles BTN_CUENTA.Click

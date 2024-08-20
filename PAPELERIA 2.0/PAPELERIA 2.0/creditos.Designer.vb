@@ -58,16 +58,14 @@ Partial Class creditos
         Me.Label5 = New System.Windows.Forms.Label()
         Me.BTN_ELIMINA = New System.Windows.Forms.Button()
         Me.BTN_AGREGA = New System.Windows.Forms.Button()
-        Me.TXT_CANTIDAD = New System.Windows.Forms.TextBox()
         Me.TXT_PRECIO = New System.Windows.Forms.TextBox()
         Me.TXT_DESCRIPCION = New System.Windows.Forms.TextBox()
         Me.TXT_CODIGO = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BTN_ACEPTAR = New System.Windows.Forms.Button()
         Me.BTN_CANCELAR = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TXT_CANTIDAD = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -94,14 +92,14 @@ Partial Class creditos
         Me.TXT_IMPORTE.Location = New System.Drawing.Point(579, 140)
         Me.TXT_IMPORTE.Name = "TXT_IMPORTE"
         Me.TXT_IMPORTE.Size = New System.Drawing.Size(87, 20)
-        Me.TXT_IMPORTE.TabIndex = 122
+        Me.TXT_IMPORTE.TabIndex = 12
         '
         'TXT_DESCUENTO
         '
         Me.TXT_DESCUENTO.Location = New System.Drawing.Point(512, 140)
         Me.TXT_DESCUENTO.Name = "TXT_DESCUENTO"
         Me.TXT_DESCUENTO.Size = New System.Drawing.Size(35, 20)
-        Me.TXT_DESCUENTO.TabIndex = 121
+        Me.TXT_DESCUENTO.TabIndex = 11
         '
         'Label1
         '
@@ -117,7 +115,7 @@ Partial Class creditos
         Me.Button1.Location = New System.Drawing.Point(115, 137)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(22, 23)
-        Me.Button1.TabIndex = 117
+        Me.Button1.TabIndex = 7
         Me.Button1.Text = "..."
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -162,7 +160,7 @@ Partial Class creditos
         Me.TXT_RUT.Location = New System.Drawing.Point(537, 97)
         Me.TXT_RUT.Name = "TXT_RUT"
         Me.TXT_RUT.Size = New System.Drawing.Size(185, 20)
-        Me.TXT_RUT.TabIndex = 115
+        Me.TXT_RUT.TabIndex = 5
         '
         'Label14
         '
@@ -187,21 +185,21 @@ Partial Class creditos
         Me.TXT_DOMICILIO.Location = New System.Drawing.Point(330, 97)
         Me.TXT_DOMICILIO.Name = "TXT_DOMICILIO"
         Me.TXT_DOMICILIO.Size = New System.Drawing.Size(203, 20)
-        Me.TXT_DOMICILIO.TabIndex = 114
+        Me.TXT_DOMICILIO.TabIndex = 4
         '
         'TXT_NOMBRE
         '
         Me.TXT_NOMBRE.Location = New System.Drawing.Point(122, 97)
         Me.TXT_NOMBRE.Name = "TXT_NOMBRE"
         Me.TXT_NOMBRE.Size = New System.Drawing.Size(202, 20)
-        Me.TXT_NOMBRE.TabIndex = 113
+        Me.TXT_NOMBRE.TabIndex = 3
         '
         'TXT_CUENTA
         '
         Me.TXT_CUENTA.Location = New System.Drawing.Point(22, 97)
         Me.TXT_CUENTA.Name = "TXT_CUENTA"
         Me.TXT_CUENTA.Size = New System.Drawing.Size(66, 20)
-        Me.TXT_CUENTA.TabIndex = 111
+        Me.TXT_CUENTA.TabIndex = 1
         Me.TXT_CUENTA.Text = "9000"
         '
         'BTN_CUENTA
@@ -209,7 +207,7 @@ Partial Class creditos
         Me.BTN_CUENTA.Location = New System.Drawing.Point(94, 95)
         Me.BTN_CUENTA.Name = "BTN_CUENTA"
         Me.BTN_CUENTA.Size = New System.Drawing.Size(22, 23)
-        Me.BTN_CUENTA.TabIndex = 112
+        Me.BTN_CUENTA.TabIndex = 2
         Me.BTN_CUENTA.Text = "..."
         Me.BTN_CUENTA.UseVisualStyleBackColor = True
         '
@@ -352,7 +350,7 @@ Partial Class creditos
         '
         'BTN_ELIMINA
         '
-        Me.BTN_ELIMINA.Location = New System.Drawing.Point(674, 234)
+        Me.BTN_ELIMINA.Location = New System.Drawing.Point(678, 191)
         Me.BTN_ELIMINA.Name = "BTN_ELIMINA"
         Me.BTN_ELIMINA.Size = New System.Drawing.Size(82, 24)
         Me.BTN_ELIMINA.TabIndex = 125
@@ -361,49 +359,33 @@ Partial Class creditos
         '
         'BTN_AGREGA
         '
-        Me.BTN_AGREGA.Location = New System.Drawing.Point(674, 191)
+        Me.BTN_AGREGA.Location = New System.Drawing.Point(678, 140)
         Me.BTN_AGREGA.Name = "BTN_AGREGA"
         Me.BTN_AGREGA.Size = New System.Drawing.Size(82, 24)
-        Me.BTN_AGREGA.TabIndex = 123
+        Me.BTN_AGREGA.TabIndex = 13
         Me.BTN_AGREGA.Text = "AGREGAR"
         Me.BTN_AGREGA.UseVisualStyleBackColor = True
-        '
-        'TXT_CANTIDAD
-        '
-        Me.TXT_CANTIDAD.Location = New System.Drawing.Point(625, 31)
-        Me.TXT_CANTIDAD.Name = "TXT_CANTIDAD"
-        Me.TXT_CANTIDAD.Size = New System.Drawing.Size(69, 20)
-        Me.TXT_CANTIDAD.TabIndex = 119
         '
         'TXT_PRECIO
         '
         Me.TXT_PRECIO.Location = New System.Drawing.Point(310, 139)
         Me.TXT_PRECIO.Name = "TXT_PRECIO"
         Me.TXT_PRECIO.Size = New System.Drawing.Size(87, 20)
-        Me.TXT_PRECIO.TabIndex = 120
+        Me.TXT_PRECIO.TabIndex = 9
         '
         'TXT_DESCRIPCION
         '
         Me.TXT_DESCRIPCION.Location = New System.Drawing.Point(143, 140)
         Me.TXT_DESCRIPCION.Name = "TXT_DESCRIPCION"
         Me.TXT_DESCRIPCION.Size = New System.Drawing.Size(161, 20)
-        Me.TXT_DESCRIPCION.TabIndex = 118
+        Me.TXT_DESCRIPCION.TabIndex = 8
         '
         'TXT_CODIGO
         '
         Me.TXT_CODIGO.Location = New System.Drawing.Point(22, 140)
         Me.TXT_CODIGO.Name = "TXT_CODIGO"
         Me.TXT_CODIGO.Size = New System.Drawing.Size(87, 20)
-        Me.TXT_CODIGO.TabIndex = 116
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(622, 13)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(62, 13)
-        Me.Label4.TabIndex = 128
-        Me.Label4.Text = "CANTIDAD"
+        Me.TXT_CODIGO.TabIndex = 6
         '
         'Label3
         '
@@ -441,12 +423,12 @@ Partial Class creditos
         Me.BTN_CANCELAR.Text = "CANCELAR"
         Me.BTN_CANCELAR.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'TXT_CANTIDAD
         '
-        Me.TextBox1.Location = New System.Drawing.Point(410, 140)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(69, 20)
-        Me.TextBox1.TabIndex = 151
+        Me.TXT_CANTIDAD.Location = New System.Drawing.Point(410, 140)
+        Me.TXT_CANTIDAD.Name = "TXT_CANTIDAD"
+        Me.TXT_CANTIDAD.Size = New System.Drawing.Size(69, 20)
+        Me.TXT_CANTIDAD.TabIndex = 10
         '
         'Label7
         '
@@ -463,7 +445,7 @@ Partial Class creditos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 461)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TXT_CANTIDAD)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.BTN_CANCELAR)
         Me.Controls.Add(Me.BTN_ACEPTAR)
@@ -497,11 +479,9 @@ Partial Class creditos
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BTN_ELIMINA)
         Me.Controls.Add(Me.BTN_AGREGA)
-        Me.Controls.Add(Me.TXT_CANTIDAD)
         Me.Controls.Add(Me.TXT_PRECIO)
         Me.Controls.Add(Me.TXT_DESCRIPCION)
         Me.Controls.Add(Me.TXT_CODIGO)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Name = "creditos"
@@ -547,15 +527,13 @@ Partial Class creditos
     Friend WithEvents Label5 As Label
     Friend WithEvents BTN_ELIMINA As Button
     Friend WithEvents BTN_AGREGA As Button
-    Friend WithEvents TXT_CANTIDAD As TextBox
     Friend WithEvents TXT_PRECIO As TextBox
     Friend WithEvents TXT_DESCRIPCION As TextBox
     Friend WithEvents TXT_CODIGO As TextBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents BTN_ACEPTAR As Button
     Friend WithEvents BTN_CANCELAR As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TXT_CANTIDAD As TextBox
     Friend WithEvents Label7 As Label
 End Class

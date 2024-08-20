@@ -517,7 +517,7 @@ Partial Class CONTADOS
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Name = "CONTADOS"
-        Me.Text = "Form1"
+        Me.Text = "CONTADO"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

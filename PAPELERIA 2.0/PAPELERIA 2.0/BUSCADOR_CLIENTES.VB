@@ -10,8 +10,8 @@ Public Class BUSCADOR_CLIENTES
             Dim selectedValue2 As String = DataGridView1.SelectedRows(0).Cells("DOMICILIO").Value.ToString()
             Dim selectedValue3 As String = DataGridView1.SelectedRows(0).Cells("RUT").Value.ToString()
 
-            CONTADOS.RecibirDatos1(selectedValue, selectedValue1, selectedValue2, selectedValue3)
-            'creditos.RecibirDatos1(selectedValue, selectedValue1, selectedValue2, selectedValue3)
+            'CONTADOS.RecibirDatos1(selectedValue, selectedValue1, selectedValue2, selectedValue3)
+            creditos.RecibirDatos1(selectedValue, selectedValue1, selectedValue2, selectedValue3)
         End If
     End Sub
 
