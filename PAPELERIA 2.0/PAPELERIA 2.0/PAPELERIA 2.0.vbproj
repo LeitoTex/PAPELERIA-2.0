@@ -63,6 +63,12 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -122,10 +128,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DEVOLUCION.Designer.VB">
+      <DependentUpon>DEVOLUCION.VB</DependentUpon>
+    </Compile>
+    <Compile Include="DEVOLUCION.VB">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ESTADOS_DE_CUENTA.Designer.VB">
       <DependentUpon>ESTADOS_DE_CUENTA.VB</DependentUpon>
     </Compile>
     <Compile Include="ESTADOS_DE_CUENTA.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ESTADO_DE_CUENTA_2.Designer.VB">
+      <DependentUpon>ESTADO_DE_CUENTA_2.VB</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_DE_CUENTA_2.VB">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LOGIN.Designer.vb">
@@ -163,6 +181,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NOTA_DE_CREDITO.Designer.VB">
+      <DependentUpon>NOTA_DE_CREDITO.VB</DependentUpon>
+    </Compile>
+    <Compile Include="NOTA_DE_CREDITO.VB">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Productos.Designer.vb">
       <DependentUpon>Productos.vb</DependentUpon>
@@ -202,11 +226,17 @@
     <EmbeddedResource Include="creditos.resx">
       <DependentUpon>creditos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DEVOLUCION.resx">
+      <DependentUpon>DEVOLUCION.VB</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ESTADOS_DE_CUENTA.resx">
       <DependentUpon>ESTADOS_DE_CUENTA.VB</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CONTADOS.resx">
       <DependentUpon>CONTADOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ESTADO_DE_CUENTA_2.resx">
+      <DependentUpon>ESTADO_DE_CUENTA_2.VB</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.vb</DependentUpon>
@@ -219,6 +249,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NOTA_DE_CREDITO.resx">
+      <DependentUpon>NOTA_DE_CREDITO.VB</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos.resx">
       <DependentUpon>Productos.vb</DependentUpon>
@@ -255,6 +288,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

@@ -19,16 +19,16 @@
         btn_lgout.Hide()
         BTN_CONTADOS.Hide()
         BTN_CREDITO.Hide()
+        BTN_DEVOLUCION.Hide()
+        BTN_NOTA.Hide()
     End Sub
     Sub MUESTRA()
         btn_lgout.Show()
         BTN_CONTADOS.Show()
         BTN_CREDITO.Show()
-
+        BTN_DEVOLUCION.Show()
+        BTN_NOTA.Show()
     End Sub
-
-
-
     Private Sub btn_lgout_Click(sender As Object, e As EventArgs) Handles btn_lgout.Click
         LOGIN.Show()
         LOGIN.TXT_USER.Clear()
@@ -51,7 +51,7 @@
     End Sub
 
     Private Sub BTN_CREDITO_Click(sender As Object, e As EventArgs) Handles BTN_CREDITO.Click
-        Carga_formulario(creditos)
+        Carga_formulario(Creditos)
         oculta()
     End Sub
 
@@ -74,6 +74,17 @@
 
     Private Sub USUARIOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles USUARIOToolStripMenuItem.Click
         Carga_formulario(REGISTRAR_USUARIOS)
+        oculta()
+
+    End Sub
+
+    Private Sub BTN_DEVOLUCION_Click(sender As Object, e As EventArgs) Handles BTN_DEVOLUCION.Click
+        Carga_formulario(DEVOLUCION)
+        oculta()
+    End Sub
+
+    Private Sub BTN_NOTA_Click(sender As Object, e As EventArgs) Handles BTN_NOTA.Click
+        Carga_formulario(NOTA_DE_CREDITO)
         oculta()
 
     End Sub

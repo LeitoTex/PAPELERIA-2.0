@@ -1,9 +1,8 @@
 ﻿
 Imports System.Data.OleDb
-Imports iTextSharp.text
-Imports iTextSharp.text.pdf
+'Imports iTextSharp.text
+'Imports iTextSharp.text.pdf
 Imports System.IO
-
 Public Class ESTADOS_DE_CUENTA
 
     Dim n As Integer
@@ -27,10 +26,10 @@ Public Class ESTADOS_DE_CUENTA
             Dim da As OleDbDataAdapter 'DATAADPTER
             Dim dt As DataTable
             Dim consulta As String 'f9
-            consulta = "SELECT CLIENTES.NOMBRE, CLIENTES.FECHA, MOVIMIENTOS.TIPO_OPERACION, MOVIMIENTOS.IMPORTE, MOVIMIENTOS.OBSERVACION
-From MOVIMIENTOS
-Where (((MOVIMIENTOS.NRO_NOMBRE) = " & LBL_NUMERO_CUENTA.Text & "))
-Order By MOVIMIENTOS.FECHA DESC;"
+            consulta = "SELECT CLIENTES.numero_cuenta, CLIENTES.nombre, CLIENTES.domicilio, clientes.saldo
+    From CLIENTES
+    Where (((CLIENTES.numero_cuenta) = " & LBL_NUMERO_CUENTA.Text & "))
+    Order By CLIENTES.FECHA DESC;"
 
             da = New OleDbDataAdapter(consulta, RutaDB_papeleria)
             dt = New DataTable
@@ -57,9 +56,9 @@ Order By MOVIMIENTOS.FECHA DESC;"
             fecha1 = CDate(DateTimePicker_DESDE.Text).ToString("MM/dd/yyyy")
             fecha2 = CDate(DateTimePicker_HASTA.Text).ToString("MM/dd/yyyy")
 
-            consulta = "SELECT MOVIMIENTOS.NRO_CUENTA, MOVIMIENTOS.FECHA, MOVIMIENTOS.TIPO_OPERACION, MOVIMIENTOS.IMPORTE, MOVIMIENTOS.OBSERVACION
+            consulta = "SELECT MOVIMIENTOS.NRO_CUENTA, MOVIMIENTOS.FECHA, MOVIMIENTOS.IMPORTE, MOVIMIENTOS.detalle
 From MOVIMIENTOS
-Where MOVIMIENTOS.NRO_CUENTA = " & ListBox2.SelectedIndex & " And MOVIMIENTOS.TIPO_OPERACION = '" & CMB_TIPO_OPERACION.Text & "' And MOVIMIENTOS.FECHA 
+Where MOVIMIENTOS.NRO_CUENTA = " & ListBox2.SelectedIndex & " And MOVIMIENTOS.FECHA 
 Between # " & fecha1 & " # And # " & fecha2 & " # "
 
             da1 = New OleDbDataAdapter(consulta, RutaDB_papeleria)
@@ -79,7 +78,7 @@ Between # " & fecha1 & " # And # " & fecha2 & " # "
         Try
             Dim SQL As String
             '               0                   1
-            SQL = "Select USUARIOS.NOMBRE, USUARIOS.APELLIDO, USUARIOS.NRO_CUENTA, USUARIOS.usuario From USUARIOS order by APELLIDO"
+            SQL = "Select clientes.numero_cuenta, clientes.nombre, clientes.numero_cuenta, clientes.saldo From clientes order by numero_cuenta"
 
             Dim da As New OleDbDataAdapter(SQL, RutaDB_papeleria)
             Dim dt As New DataTable
@@ -110,8 +109,8 @@ Between # " & fecha1 & " # And # " & fecha2 & " # "
 
             DATO = TXT_NUMERO_CUENTA.Text & "%"
             '                   0                  1
-            SQL = "Select USUARIOS.NOMBRE, USUARIOS.APELLIDO, USUARIOS.NRO_CUENTA, USUARIOS.usuario From USUARIOS
-Where (((USUARIOS.nombre) Like '" & DATO & "'));"
+            SQL = "Select clientes.numero_cuenta, clientes.nombre, clientes.domicilio From clientes
+Where (((clientes.nombre) Like '" & DATO & "'));"
 
             Dim da As New OleDbDataAdapter(SQL, RutaDB_papeleria)
             Dim dt As New DataTable
@@ -144,7 +143,7 @@ Where (((USUARIOS.nombre) Like '" & DATO & "'));"
     End Sub
     Private Sub REGISTRO_CAJERO_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         carga_datos()
-        BTN_BUSCAR.Enabled = False
+        'BTN_BUSCAR.Enabled = False
 
     End Sub
     Private Sub DateTimePicker_HASTA_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker_HASTA.ValueChanged
@@ -169,13 +168,9 @@ Where (((USUARIOS.nombre) Like '" & DATO & "'));"
 
     Private Sub BTN_CANCELAR_Click(sender As Object, e As EventArgs) Handles BTN_CANCELAR.Click
         DGV1.ClearSelection()
-        CMB_TIPO_OPERACION.Text = ""
         BTN_BUSCAR.Enabled = False
         Me.TXT_NUMERO_CUENTA.Focus()
 
     End Sub
 
-    Private Sub CMB_TIPO_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CMB_TIPO_OPERACION.SelectedIndexChanged
-        BTN_BUSCAR.Enabled = True
-    End Sub
 End Class

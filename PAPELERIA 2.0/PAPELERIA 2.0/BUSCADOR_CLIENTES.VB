@@ -1,19 +1,46 @@
 ﻿Imports System.Data.OleDb
 
 Public Class BUSCADOR_CLIENTES
+    Public Property FormularioReceptor As String
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Try
+            If DataGridView1.SelectedRows.Count > 0 Then
+                Dim selectedValue As String = If(DataGridView1.SelectedRows(0).Cells("ID").Value?.ToString(), String.Empty)
+                Dim selectedValue1 As String = If(DataGridView1.SelectedRows(0).Cells("NOMBRE").Value?.ToString(), String.Empty)
+                Dim selectedValue2 As String = If(DataGridView1.SelectedRows(0).Cells("DOMICILIO").Value?.ToString(), String.Empty)
+                Dim selectedValue3 As String = If(DataGridView1.SelectedRows(0).Cells("RUT").Value?.ToString(), String.Empty)
+                'If DataGridView1.SelectedRows.Count > 0 Then
+                '    Dim selectedValue As String = DataGridView1.SelectedRows(0).Cells("ID").Value.ToString()
+                '    Dim selectedValue1 As String = DataGridView1.SelectedRows(0).Cells("NOMBRE").Value.ToString()
+                '    Dim selectedValue2 As String = DataGridView1.SelectedRows(0).Cells("DOMICILIO").Value.ToString()
+                '    Dim selectedValue3 As String = DataGridView1.SelectedRows(0).Cells("RUT").Value.ToString()
 
-        If DataGridView1.SelectedRows.Count > 0 Then
-            Dim selectedValue As String = DataGridView1.SelectedRows(0).Cells("ID").Value.ToString()
-            Dim selectedValue1 As String = DataGridView1.SelectedRows(0).Cells("NOMBRE").Value.ToString()
-            Dim selectedValue2 As String = DataGridView1.SelectedRows(0).Cells("DOMICILIO").Value.ToString()
-            Dim selectedValue3 As String = DataGridView1.SelectedRows(0).Cells("RUT").Value.ToString()
+                ' Lógica condicional para enviar los datos al formulario correspondiente
+                Select Case FormularioReceptor
+                    Case "CONTADOS"
+                        CONTADOS.recibirdatos1(selectedValue, selectedValue1, selectedValue2, selectedValue3)
+                    Case "CREDITOS"
+                        Creditos.RecibirDatos2(selectedValue, selectedValue1, selectedValue2, selectedValue3)
+                    Case "DEVOLUCION"
+                        DEVOLUCION.RecibirDatos3(selectedValue, selectedValue1, selectedValue2, selectedValue3)
+                    Case "NOTA_DE_CREDITO"
+                        NOTA_DE_CREDITO.RecibirDatos4(selectedValue, selectedValue1, selectedValue2, selectedValue3)
+                End Select
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error al transferir los datos: " & ex.Message)
+        End Try
 
-            'CONTADOS.RecibirDatos1(selectedValue, selectedValue1, selectedValue2, selectedValue3)
-            creditos.RecibirDatos1(selectedValue, selectedValue1, selectedValue2, selectedValue3)
-        End If
     End Sub
+
+    '    CONTADOS.RecibirDatos1(selectedValue, selectedValue1, selectedValue2, selectedValue3)
+    '    Creditos.RecibirDatos2(selectedValue, selectedValue1, selectedValue2, selectedValue3)
+    '    DEVOLUCION.RecibirDatos3(selectedValue, selectedValue1, selectedValue2, selectedValue3)
+    '    NOTA_DE_CREDITO.RecibirDatos4(selectedValue, selectedValue1, selectedValue2, selectedValue3)
+    'End If
+
+
 
     Private Sub Buscador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Actualizartabla(Me.DataGridView1, "CLIENTES", "", "id")
@@ -74,4 +101,16 @@ Where (((CLIENTES.nombre) Like '" & DATO & "'));"
         Me.Close()
     End Sub
 
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub DataGridView1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles DataGridView1.KeyPress
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            e.Handled = True
+            'ENVIAR ESA PULSACIÓN
+            SendKeys.Send("{enter}")
+        End If
+
+    End Sub
 End Class

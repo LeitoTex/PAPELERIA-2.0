@@ -1,4 +1,9 @@
-﻿Public Class CONTADOS
+﻿
+Imports System.Drawing.Printing
+
+Public Class CONTADOS
+    Private WithEvents PrintDocument1 As New PrintDocument()
+
     Public Property id As String
     Dim descuento As Double
     Dim subtotal As Double = 0
@@ -31,7 +36,7 @@
         Else
             e.Handled = True
         End If
-        If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
+        If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
             'ENVIAR ESA PULSACIÓN
             SendKeys.Send("{tab}")
@@ -44,7 +49,7 @@
         Else
             e.Handled = True
         End If
-        If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
+        If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
             SendKeys.Send("{tab}")
 
@@ -147,28 +152,28 @@
     End Sub
 
     Private Sub TXT_CODIGO_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_CODIGO.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
+        If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
             SendKeys.Send("{tab}")
         End If
     End Sub
 
     Private Sub TXT_CUENTA_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_CUENTA.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
+        If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
             SendKeys.Send("{tab}")
         End If
     End Sub
 
     Private Sub TXT_DESCRIPCION_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_DESCRIPCION.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
+        If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
             SendKeys.Send("{tab}")
         End If
     End Sub
 
     Private Sub TXT_DESCUENTO_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_DESCUENTO.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then 'presiono enter?
+        If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
             SendKeys.Send("{tab}")
         End If
@@ -197,7 +202,7 @@
         TXT_PRECIO.Text = selectedvalue2
         TXT_CANTIDAD.Focus()
     End Sub
-    Public Sub RecibirDatos1(selectedvalue As String, selectedvalue1 As String, selectedvalue2 As String, selectedvalue3 As String)
+    Public Sub recibirdatos1(selectedvalue As String, selectedvalue1 As String, selectedvalue2 As String, selectedvalue3 As String)
         TXT_CUENTA.Text = selectedvalue
         TXT_NOMBRE.Text = selectedvalue1
         TXT_DOMICILIO.Text = selectedvalue2
@@ -216,5 +221,59 @@
         TXT_CODIGO.Focus()
 
     End Sub
+
+    Private Sub BTN_ACEPTAR_Click(sender As Object, e As EventArgs) Handles BTN_ACEPTAR.Click
+        PrintDocument1.Print()
+    End Sub
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
+
+        Dim font As New System.Drawing.Font("Arial", 12)
+        Dim brush As New SolidBrush(Color.Black)
+        Dim startX As Single = 10
+        Dim startY As Single = 10
+        Dim offsetY As Single = 0
+        Dim pageHeight As Integer = e.MarginBounds.Height
+
+        ' Obtener la altura del texto
+        Dim textHeight As Single = e.Graphics.MeasureString("Texto", font).Height
+
+        ' Imprimir encabezados de columna
+        For Each column As ColumnHeader In ListView1.Columns
+            If Not String.IsNullOrEmpty(column.Text) Then
+                e.Graphics.DrawString(column.Text, font, brush, CSng(startX), CSng(startY + offsetY))
+            End If
+            startX += column.Width
+        Next
+
+        ' Imprimir filas de datos
+        offsetY += textHeight
+        For Each item As ListViewItem In ListView1.Items
+            startX = 10
+            For Each subItem As ListViewItem.ListViewSubItem In item.SubItems
+                If Not String.IsNullOrEmpty(subItem.Text) Then
+                    e.Graphics.DrawString(subItem.Text, font, brush, CSng(startX), CSng(startY + offsetY))
+                End If
+                startX += ListView1.Columns(item.SubItems.IndexOf(subItem)).Width
+            Next
+            offsetY += textHeight
+
+            ' Verificar si se necesita una nueva página
+            If startY + offsetY + textHeight > pageHeight Then
+                e.HasMorePages = True
+                Return
+            End If
+        Next
+
+        e.HasMorePages = False
+    End Sub
+
+    Private Sub BTN_CANCELAR_Click(sender As Object, e As EventArgs) Handles BTN_CANCELAR.Click
+        Me.Close()
+        'muestra()
+
+    End Sub
+
 End Class
+
+
 

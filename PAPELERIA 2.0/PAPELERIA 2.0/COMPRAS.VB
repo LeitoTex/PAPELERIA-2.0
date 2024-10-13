@@ -34,7 +34,7 @@
 
     End Sub
 
-    Private Sub TXT_CANTIDAD_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_CANTIDAD.KeyPress
+    Private Sub TXT_CANTIDAD_KeyPress(sender As Object, e As KeyPressEventArgs)
         If InStr("0123456789" & Chr(8), e.KeyChar) Then
             e.Handled = False
         Else
@@ -76,6 +76,10 @@
         lista.SubItems.Add(TXT_CANTIDAD.Text)
 
         ListView1.Items.Add(lista)
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
     End Sub
 End Class

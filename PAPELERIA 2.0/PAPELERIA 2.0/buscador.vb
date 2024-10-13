@@ -8,7 +8,7 @@ Public Class Buscador
             Dim selectedValue1 As String = DataGridView1.SelectedRows(0).Cells("descripcion").Value.ToString()
             Dim selectedValue2 As String = DataGridView1.SelectedRows(0).Cells("precio venta").Value.ToString()
             CONTADOS.RecibirDatos(selectedValue, selectedValue1, selectedValue2)
-            creditos.RecibirDatos(selectedValue, selectedValue1, selectedValue2)
+            Creditos.RecibirDatos(selectedValue, selectedValue1, selectedValue2)
         End If
     End Sub
 
@@ -48,8 +48,9 @@ Public Class Buscador
 
             DATO = TextBox1.Text & "%"
             '                   0                  1
-            SQL = "Select productos.nombre producto From productos
-Where (((productos.nombre producto) Like '" & DATO & "'));"
+            '            SQL = "Select productos.nombre producto From productos
+            'Where (((productos.nombre producto) Like '" & DATO & "'));"
+            SQL = "SELECT [productos].[DESCRIPCION] AS producto FROM [productos] WHERE [productos].[DESCRIPCION] LIKE '" & DATO & "';"
 
             Dim da As New OleDbDataAdapter(SQL, RutaDB_papeleria)
             Dim dt As New DataTable
@@ -58,6 +59,7 @@ Where (((productos.nombre producto) Like '" & DATO & "'));"
             For i = 0 To dt.Rows.Count - 1
                 Dim dr As DataRow
                 dr = dt.Rows(i)
+                DataGridView1.DataSource = dt
                 'ListBox1.Items.Add(dr(0) & " - " & dr(1))
                 'ListBox2.Items.Add(dr(2))
                 'ListBox3.Items.Add(dr(3))

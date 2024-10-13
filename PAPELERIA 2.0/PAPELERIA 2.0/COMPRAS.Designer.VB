@@ -50,28 +50,31 @@ Partial Class COMPRAS
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.BTN_ELIMINA = New System.Windows.Forms.Button()
         Me.BTN_AGREGA = New System.Windows.Forms.Button()
-        Me.TXT_CANTIDAD = New System.Windows.Forms.TextBox()
         Me.TXT_PRECIO = New System.Windows.Forms.TextBox()
         Me.TXT_DESCRIPCION = New System.Windows.Forms.TextBox()
         Me.TXT_CODIGO = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BTN_MODIFICAR_PROD = New System.Windows.Forms.Button()
         Me.BTN_ACEPTAR = New System.Windows.Forms.Button()
         Me.BTN_MODIFICAR_FACT = New System.Windows.Forms.Button()
+        Me.TXT_CANTIDAD = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.TXT_DESCUENTO = New System.Windows.Forms.TextBox()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(576, 122)
+        Me.Label19.Location = New System.Drawing.Point(563, 122)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(56, 13)
         Me.Label19.TabIndex = 186
@@ -79,7 +82,7 @@ Partial Class COMPRAS
         '
         'TXT_IMPORTE
         '
-        Me.TXT_IMPORTE.Location = New System.Drawing.Point(578, 140)
+        Me.TXT_IMPORTE.Location = New System.Drawing.Point(565, 140)
         Me.TXT_IMPORTE.Name = "TXT_IMPORTE"
         Me.TXT_IMPORTE.Size = New System.Drawing.Size(87, 20)
         Me.TXT_IMPORTE.TabIndex = 160
@@ -257,14 +260,14 @@ Partial Class COMPRAS
         'ListView1
         '
         Me.ListView1.CheckBoxes = True
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.CODIGO, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.CODIGO, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader1, Me.ColumnHeader7})
         Me.ListView1.ForeColor = System.Drawing.SystemColors.HotTrack
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(22, 191)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(629, 208)
+        Me.ListView1.Size = New System.Drawing.Size(619, 208)
         Me.ListView1.TabIndex = 170
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -282,13 +285,13 @@ Partial Class COMPRAS
         '
         'ColumnHeader3
         '
-        Me.ColumnHeader3.Text = "PRECIO"
+        Me.ColumnHeader3.Text = "CANTIDAD"
         Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader3.Width = 107
         '
         'ColumnHeader4
         '
-        Me.ColumnHeader4.Text = "CANTIDAD"
+        Me.ColumnHeader4.Text = "PRECIO"
         Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader4.Width = 103
         '
@@ -296,13 +299,7 @@ Partial Class COMPRAS
         '
         Me.ColumnHeader5.Text = "DESCUENTO"
         Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader5.Width = 119
-        '
-        'ColumnHeader6
-        '
-        Me.ColumnHeader6.Text = "IMPORTE"
-        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader6.Width = 102
+        Me.ColumnHeader5.Width = 53
         '
         'Label9
         '
@@ -333,7 +330,7 @@ Partial Class COMPRAS
         '
         'BTN_ELIMINA
         '
-        Me.BTN_ELIMINA.Location = New System.Drawing.Point(674, 263)
+        Me.BTN_ELIMINA.Location = New System.Drawing.Point(674, 227)
         Me.BTN_ELIMINA.Name = "BTN_ELIMINA"
         Me.BTN_ELIMINA.Size = New System.Drawing.Size(90, 24)
         Me.BTN_ELIMINA.TabIndex = 163
@@ -342,23 +339,16 @@ Partial Class COMPRAS
         '
         'BTN_AGREGA
         '
-        Me.BTN_AGREGA.Location = New System.Drawing.Point(674, 191)
+        Me.BTN_AGREGA.Location = New System.Drawing.Point(674, 137)
         Me.BTN_AGREGA.Name = "BTN_AGREGA"
         Me.BTN_AGREGA.Size = New System.Drawing.Size(90, 24)
         Me.BTN_AGREGA.TabIndex = 161
         Me.BTN_AGREGA.Text = "AGREGAR"
         Me.BTN_AGREGA.UseVisualStyleBackColor = True
         '
-        'TXT_CANTIDAD
-        '
-        Me.TXT_CANTIDAD.Location = New System.Drawing.Point(483, 140)
-        Me.TXT_CANTIDAD.Name = "TXT_CANTIDAD"
-        Me.TXT_CANTIDAD.Size = New System.Drawing.Size(69, 20)
-        Me.TXT_CANTIDAD.TabIndex = 157
-        '
         'TXT_PRECIO
         '
-        Me.TXT_PRECIO.Location = New System.Drawing.Point(370, 140)
+        Me.TXT_PRECIO.Location = New System.Drawing.Point(425, 140)
         Me.TXT_PRECIO.Name = "TXT_PRECIO"
         Me.TXT_PRECIO.Size = New System.Drawing.Size(87, 20)
         Me.TXT_PRECIO.TabIndex = 158
@@ -377,19 +367,10 @@ Partial Class COMPRAS
         Me.TXT_CODIGO.Size = New System.Drawing.Size(87, 20)
         Me.TXT_CODIGO.TabIndex = 154
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(485, 122)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(62, 13)
-        Me.Label4.TabIndex = 166
-        Me.Label4.Text = "CANTIDAD"
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(392, 122)
+        Me.Label3.Location = New System.Drawing.Point(422, 121)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(47, 13)
         Me.Label3.TabIndex = 165
@@ -406,7 +387,7 @@ Partial Class COMPRAS
         '
         'BTN_MODIFICAR_PROD
         '
-        Me.BTN_MODIFICAR_PROD.Location = New System.Drawing.Point(674, 227)
+        Me.BTN_MODIFICAR_PROD.Location = New System.Drawing.Point(674, 191)
         Me.BTN_MODIFICAR_PROD.Name = "BTN_MODIFICAR_PROD"
         Me.BTN_MODIFICAR_PROD.Size = New System.Drawing.Size(90, 24)
         Me.BTN_MODIFICAR_PROD.TabIndex = 187
@@ -431,12 +412,59 @@ Partial Class COMPRAS
         Me.BTN_MODIFICAR_FACT.Text = "MODIFICAR"
         Me.BTN_MODIFICAR_FACT.UseVisualStyleBackColor = True
         '
+        'TXT_CANTIDAD
+        '
+        Me.TXT_CANTIDAD.Location = New System.Drawing.Point(350, 139)
+        Me.TXT_CANTIDAD.Name = "TXT_CANTIDAD"
+        Me.TXT_CANTIDAD.Size = New System.Drawing.Size(69, 20)
+        Me.TXT_CANTIDAD.TabIndex = 190
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(352, 121)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(62, 13)
+        Me.Label4.TabIndex = 191
+        Me.Label4.Text = "CANTIDAD"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(521, 122)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(38, 13)
+        Me.Label18.TabIndex = 193
+        Me.Label18.Text = "%DTO"
+        '
+        'TXT_DESCUENTO
+        '
+        Me.TXT_DESCUENTO.Location = New System.Drawing.Point(524, 140)
+        Me.TXT_DESCUENTO.Name = "TXT_DESCUENTO"
+        Me.TXT_DESCUENTO.Size = New System.Drawing.Size(35, 20)
+        Me.TXT_DESCUENTO.TabIndex = 192
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "TASA"
+        Me.ColumnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "IMPORTE"
+        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader7.Width = 100
+        '
         'COMPRAS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gray
         Me.ClientSize = New System.Drawing.Size(800, 468)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.TXT_DESCUENTO)
+        Me.Controls.Add(Me.TXT_CANTIDAD)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.BTN_MODIFICAR_FACT)
         Me.Controls.Add(Me.BTN_ACEPTAR)
         Me.Controls.Add(Me.BTN_MODIFICAR_PROD)
@@ -468,11 +496,9 @@ Partial Class COMPRAS
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BTN_ELIMINA)
         Me.Controls.Add(Me.BTN_AGREGA)
-        Me.Controls.Add(Me.TXT_CANTIDAD)
         Me.Controls.Add(Me.TXT_PRECIO)
         Me.Controls.Add(Me.TXT_DESCRIPCION)
         Me.Controls.Add(Me.TXT_CODIGO)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Name = "COMPRAS"
@@ -510,20 +536,23 @@ Partial Class COMPRAS
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents ColumnHeader5 As ColumnHeader
-    Friend WithEvents ColumnHeader6 As ColumnHeader
     Friend WithEvents Label9 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents BTN_ELIMINA As Button
     Friend WithEvents BTN_AGREGA As Button
-    Friend WithEvents TXT_CANTIDAD As TextBox
     Friend WithEvents TXT_PRECIO As TextBox
     Friend WithEvents TXT_DESCRIPCION As TextBox
     Friend WithEvents TXT_CODIGO As TextBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents BTN_MODIFICAR_PROD As Button
     Friend WithEvents BTN_ACEPTAR As Button
     Friend WithEvents BTN_MODIFICAR_FACT As Button
+    Friend WithEvents TXT_CANTIDAD As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents TXT_DESCUENTO As TextBox
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader7 As ColumnHeader
 End Class

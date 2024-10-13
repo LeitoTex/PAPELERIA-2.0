@@ -1,14 +1,12 @@
 ﻿Imports System.Data.OleDb
 
 Public Class REGISTRAR_CLIENTES
-
     Dim obj_clientes As New Cls_clientes
     Dim n As Integer
     Dim ini As Integer
     Dim f As Integer
     Dim id As Integer
-    Private txtUsuario As Object
-
+    'Private txtUsuario As Object
     Sub ModoModificacion()
         BTN_AGREGAR.Enabled = False
         BTN_ELIMINAR.Enabled = False
@@ -49,7 +47,7 @@ Public Class REGISTRAR_CLIENTES
 
         If txt_RUT.Text.Trim = "" Then
             MsgBox("error en el usuario...")
-            txtUsuario.Focus()
+            txt_RUT.Focus()
             Return False
             Exit Function
         End If
@@ -110,13 +108,10 @@ Public Class REGISTRAR_CLIENTES
                 DGV1.Rows(nn).Selected = True
             End If
 
-
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
-
-
     Private Sub BTN_AGREGAR_Click(sender As Object, e As EventArgs) Handles BTN_AGREGAR.Click
         Try
             If ValidarDatos() Then
@@ -130,7 +125,6 @@ Public Class REGISTRAR_CLIENTES
                     MsgBox("Error al ingresar el registro, reintente la accion", MsgBoxStyle.Critical, "Error")
                 End If
             End If
-
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error de Validación de datos")
@@ -146,9 +140,9 @@ Public Class REGISTRAR_CLIENTES
         Else
             Me.ModoModificacion()
             id = ObtenerCampo(Me.DGV1, 0)
-            TXT_NOMBRE.Text = ObtenerCampo(Me.DGV1, 1)
-            TXT_domicilio.Text = ObtenerCampo(Me.DGV1, 2)
-            txt_RUT.Text = ObtenerCampo(Me.DGV1, 3)
+            TXT_NOMBRE.Text = ObtenerCampo(Me.DGV1, 2)
+            TXT_domicilio.Text = ObtenerCampo(Me.DGV1, 3)
+            txt_RUT.Text = ObtenerCampo(Me.DGV1, 4)
 
             BTN_NUEVO.Enabled = False
             BTN_AGREGAR.Enabled = False
@@ -248,12 +242,12 @@ Public Class REGISTRAR_CLIENTES
 
     End Sub
 
-    Private Sub TXT_NOMBRE_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_NOMBRE.KeyPress
-        If InStr("0123456789" & Chr(8), e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-        End If
+    'Private Sub TXT_NOMBRE_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_NOMBRE.KeyPress
+    '    If InStr("0123456789" & Chr(8), e.KeyChar) Then
+    '        e.Handled = False
+    '    Else 
+    '        e.Handled = True
+    '    End If
 
-    End Sub
+    'End Sub
 End Class

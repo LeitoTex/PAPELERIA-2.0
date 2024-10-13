@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class creditos
+Partial Class Creditos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -72,7 +72,7 @@ Partial Class creditos
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(576, 122)
+        Me.Label19.Location = New System.Drawing.Point(587, 120)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(56, 13)
         Me.Label19.TabIndex = 148
@@ -81,7 +81,7 @@ Partial Class creditos
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(509, 122)
+        Me.Label18.Location = New System.Drawing.Point(520, 120)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(38, 13)
         Me.Label18.TabIndex = 147
@@ -89,14 +89,14 @@ Partial Class creditos
         '
         'TXT_IMPORTE
         '
-        Me.TXT_IMPORTE.Location = New System.Drawing.Point(579, 140)
+        Me.TXT_IMPORTE.Location = New System.Drawing.Point(590, 138)
         Me.TXT_IMPORTE.Name = "TXT_IMPORTE"
         Me.TXT_IMPORTE.Size = New System.Drawing.Size(87, 20)
         Me.TXT_IMPORTE.TabIndex = 12
         '
         'TXT_DESCUENTO
         '
-        Me.TXT_DESCUENTO.Location = New System.Drawing.Point(512, 140)
+        Me.TXT_DESCUENTO.Location = New System.Drawing.Point(523, 138)
         Me.TXT_DESCUENTO.Name = "TXT_DESCUENTO"
         Me.TXT_DESCUENTO.Size = New System.Drawing.Size(35, 20)
         Me.TXT_DESCUENTO.TabIndex = 11
@@ -104,7 +104,7 @@ Partial Class creditos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(149, 122)
+        Me.Label1.Location = New System.Drawing.Point(160, 120)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(80, 13)
         Me.Label1.TabIndex = 146
@@ -112,7 +112,7 @@ Partial Class creditos
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(115, 137)
+        Me.Button1.Location = New System.Drawing.Point(126, 135)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(22, 23)
         Me.Button1.TabIndex = 7
@@ -122,7 +122,7 @@ Partial Class creditos
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(301, 31)
+        Me.Label17.Location = New System.Drawing.Point(312, 29)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(63, 13)
         Me.Label17.TabIndex = 145
@@ -131,7 +131,7 @@ Partial Class creditos
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(211, 31)
+        Me.Label16.Location = New System.Drawing.Point(222, 29)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(42, 13)
         Me.Label16.TabIndex = 144
@@ -140,7 +140,7 @@ Partial Class creditos
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(34, 31)
+        Me.Label8.Location = New System.Drawing.Point(45, 29)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(45, 13)
         Me.Label8.TabIndex = 143
@@ -149,7 +149,7 @@ Partial Class creditos
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(534, 73)
+        Me.Label15.Location = New System.Drawing.Point(545, 71)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(57, 13)
         Me.Label15.TabIndex = 142
@@ -157,7 +157,7 @@ Partial Class creditos
         '
         'TXT_RUT
         '
-        Me.TXT_RUT.Location = New System.Drawing.Point(537, 97)
+        Me.TXT_RUT.Location = New System.Drawing.Point(548, 95)
         Me.TXT_RUT.Name = "TXT_RUT"
         Me.TXT_RUT.Size = New System.Drawing.Size(185, 20)
         Me.TXT_RUT.TabIndex = 5
@@ -165,7 +165,7 @@ Partial Class creditos
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(327, 73)
+        Me.Label14.Location = New System.Drawing.Point(338, 71)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(62, 13)
         Me.Label14.TabIndex = 141
@@ -174,7 +174,7 @@ Partial Class creditos
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(119, 73)
+        Me.Label13.Location = New System.Drawing.Point(130, 71)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(57, 13)
         Me.Label13.TabIndex = 140
@@ -182,21 +182,21 @@ Partial Class creditos
         '
         'TXT_DOMICILIO
         '
-        Me.TXT_DOMICILIO.Location = New System.Drawing.Point(330, 97)
+        Me.TXT_DOMICILIO.Location = New System.Drawing.Point(341, 95)
         Me.TXT_DOMICILIO.Name = "TXT_DOMICILIO"
         Me.TXT_DOMICILIO.Size = New System.Drawing.Size(203, 20)
         Me.TXT_DOMICILIO.TabIndex = 4
         '
         'TXT_NOMBRE
         '
-        Me.TXT_NOMBRE.Location = New System.Drawing.Point(122, 97)
+        Me.TXT_NOMBRE.Location = New System.Drawing.Point(133, 95)
         Me.TXT_NOMBRE.Name = "TXT_NOMBRE"
         Me.TXT_NOMBRE.Size = New System.Drawing.Size(202, 20)
         Me.TXT_NOMBRE.TabIndex = 3
         '
         'TXT_CUENTA
         '
-        Me.TXT_CUENTA.Location = New System.Drawing.Point(22, 97)
+        Me.TXT_CUENTA.Location = New System.Drawing.Point(33, 95)
         Me.TXT_CUENTA.Name = "TXT_CUENTA"
         Me.TXT_CUENTA.Size = New System.Drawing.Size(66, 20)
         Me.TXT_CUENTA.TabIndex = 1
@@ -204,7 +204,7 @@ Partial Class creditos
         '
         'BTN_CUENTA
         '
-        Me.BTN_CUENTA.Location = New System.Drawing.Point(94, 95)
+        Me.BTN_CUENTA.Location = New System.Drawing.Point(105, 93)
         Me.BTN_CUENTA.Name = "BTN_CUENTA"
         Me.BTN_CUENTA.Size = New System.Drawing.Size(22, 23)
         Me.BTN_CUENTA.TabIndex = 2
@@ -214,7 +214,7 @@ Partial Class creditos
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(19, 73)
+        Me.Label12.Location = New System.Drawing.Point(30, 71)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(54, 13)
         Me.Label12.TabIndex = 139
@@ -223,14 +223,14 @@ Partial Class creditos
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(85, 28)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(96, 26)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(102, 20)
         Me.DateTimePicker1.TabIndex = 138
         '
         'TXT_SERIE
         '
-        Me.TXT_SERIE.Location = New System.Drawing.Point(259, 28)
+        Me.TXT_SERIE.Location = New System.Drawing.Point(270, 26)
         Me.TXT_SERIE.Name = "TXT_SERIE"
         Me.TXT_SERIE.Size = New System.Drawing.Size(36, 20)
         Me.TXT_SERIE.TabIndex = 137
@@ -238,7 +238,7 @@ Partial Class creditos
         '
         'TXT_NRO_DOC
         '
-        Me.TXT_NRO_DOC.Location = New System.Drawing.Point(370, 28)
+        Me.TXT_NRO_DOC.Location = New System.Drawing.Point(381, 26)
         Me.TXT_NRO_DOC.Name = "TXT_NRO_DOC"
         Me.TXT_NRO_DOC.Size = New System.Drawing.Size(75, 20)
         Me.TXT_NRO_DOC.TabIndex = 136
@@ -247,7 +247,7 @@ Partial Class creditos
         'LBL_TOTAL
         '
         Me.LBL_TOTAL.AutoSize = True
-        Me.LBL_TOTAL.Location = New System.Drawing.Point(768, 410)
+        Me.LBL_TOTAL.Location = New System.Drawing.Point(779, 408)
         Me.LBL_TOTAL.Name = "LBL_TOTAL"
         Me.LBL_TOTAL.Size = New System.Drawing.Size(13, 13)
         Me.LBL_TOTAL.TabIndex = 135
@@ -256,7 +256,7 @@ Partial Class creditos
         'LBL_IVA
         '
         Me.LBL_IVA.AutoSize = True
-        Me.LBL_IVA.Location = New System.Drawing.Point(768, 386)
+        Me.LBL_IVA.Location = New System.Drawing.Point(779, 384)
         Me.LBL_IVA.Name = "LBL_IVA"
         Me.LBL_IVA.Size = New System.Drawing.Size(13, 13)
         Me.LBL_IVA.TabIndex = 134
@@ -265,7 +265,7 @@ Partial Class creditos
         'LBL_SUBTOTAL
         '
         Me.LBL_SUBTOTAL.AutoSize = True
-        Me.LBL_SUBTOTAL.Location = New System.Drawing.Point(768, 361)
+        Me.LBL_SUBTOTAL.Location = New System.Drawing.Point(779, 359)
         Me.LBL_SUBTOTAL.Name = "LBL_SUBTOTAL"
         Me.LBL_SUBTOTAL.Size = New System.Drawing.Size(13, 13)
         Me.LBL_SUBTOTAL.TabIndex = 133
@@ -279,7 +279,7 @@ Partial Class creditos
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(22, 191)
+        Me.ListView1.Location = New System.Drawing.Point(33, 189)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(629, 208)
         Me.ListView1.TabIndex = 132
@@ -324,7 +324,7 @@ Partial Class creditos
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(675, 410)
+        Me.Label9.Location = New System.Drawing.Point(686, 408)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(42, 13)
         Me.Label9.TabIndex = 131
@@ -333,7 +333,7 @@ Partial Class creditos
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(675, 386)
+        Me.Label6.Location = New System.Drawing.Point(686, 384)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(47, 13)
         Me.Label6.TabIndex = 130
@@ -342,7 +342,7 @@ Partial Class creditos
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(675, 361)
+        Me.Label5.Location = New System.Drawing.Point(686, 359)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(67, 13)
         Me.Label5.TabIndex = 129
@@ -350,7 +350,7 @@ Partial Class creditos
         '
         'BTN_ELIMINA
         '
-        Me.BTN_ELIMINA.Location = New System.Drawing.Point(678, 191)
+        Me.BTN_ELIMINA.Location = New System.Drawing.Point(689, 189)
         Me.BTN_ELIMINA.Name = "BTN_ELIMINA"
         Me.BTN_ELIMINA.Size = New System.Drawing.Size(82, 24)
         Me.BTN_ELIMINA.TabIndex = 125
@@ -359,7 +359,7 @@ Partial Class creditos
         '
         'BTN_AGREGA
         '
-        Me.BTN_AGREGA.Location = New System.Drawing.Point(678, 140)
+        Me.BTN_AGREGA.Location = New System.Drawing.Point(689, 138)
         Me.BTN_AGREGA.Name = "BTN_AGREGA"
         Me.BTN_AGREGA.Size = New System.Drawing.Size(82, 24)
         Me.BTN_AGREGA.TabIndex = 13
@@ -368,21 +368,21 @@ Partial Class creditos
         '
         'TXT_PRECIO
         '
-        Me.TXT_PRECIO.Location = New System.Drawing.Point(310, 139)
+        Me.TXT_PRECIO.Location = New System.Drawing.Point(321, 137)
         Me.TXT_PRECIO.Name = "TXT_PRECIO"
         Me.TXT_PRECIO.Size = New System.Drawing.Size(87, 20)
         Me.TXT_PRECIO.TabIndex = 9
         '
         'TXT_DESCRIPCION
         '
-        Me.TXT_DESCRIPCION.Location = New System.Drawing.Point(143, 140)
+        Me.TXT_DESCRIPCION.Location = New System.Drawing.Point(154, 138)
         Me.TXT_DESCRIPCION.Name = "TXT_DESCRIPCION"
         Me.TXT_DESCRIPCION.Size = New System.Drawing.Size(161, 20)
         Me.TXT_DESCRIPCION.TabIndex = 8
         '
         'TXT_CODIGO
         '
-        Me.TXT_CODIGO.Location = New System.Drawing.Point(22, 140)
+        Me.TXT_CODIGO.Location = New System.Drawing.Point(33, 138)
         Me.TXT_CODIGO.Name = "TXT_CODIGO"
         Me.TXT_CODIGO.Size = New System.Drawing.Size(87, 20)
         Me.TXT_CODIGO.TabIndex = 6
@@ -390,7 +390,7 @@ Partial Class creditos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(307, 121)
+        Me.Label3.Location = New System.Drawing.Point(318, 119)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(47, 13)
         Me.Label3.TabIndex = 127
@@ -399,7 +399,7 @@ Partial Class creditos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(20, 122)
+        Me.Label2.Location = New System.Drawing.Point(31, 120)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(68, 13)
         Me.Label2.TabIndex = 126
@@ -407,7 +407,7 @@ Partial Class creditos
         '
         'BTN_ACEPTAR
         '
-        Me.BTN_ACEPTAR.Location = New System.Drawing.Point(22, 425)
+        Me.BTN_ACEPTAR.Location = New System.Drawing.Point(33, 423)
         Me.BTN_ACEPTAR.Name = "BTN_ACEPTAR"
         Me.BTN_ACEPTAR.Size = New System.Drawing.Size(79, 24)
         Me.BTN_ACEPTAR.TabIndex = 149
@@ -416,7 +416,7 @@ Partial Class creditos
         '
         'BTN_CANCELAR
         '
-        Me.BTN_CANCELAR.Location = New System.Drawing.Point(108, 425)
+        Me.BTN_CANCELAR.Location = New System.Drawing.Point(119, 423)
         Me.BTN_CANCELAR.Name = "BTN_CANCELAR"
         Me.BTN_CANCELAR.Size = New System.Drawing.Size(79, 24)
         Me.BTN_CANCELAR.TabIndex = 150
@@ -425,7 +425,7 @@ Partial Class creditos
         '
         'TXT_CANTIDAD
         '
-        Me.TXT_CANTIDAD.Location = New System.Drawing.Point(410, 140)
+        Me.TXT_CANTIDAD.Location = New System.Drawing.Point(421, 138)
         Me.TXT_CANTIDAD.Name = "TXT_CANTIDAD"
         Me.TXT_CANTIDAD.Size = New System.Drawing.Size(69, 20)
         Me.TXT_CANTIDAD.TabIndex = 10
@@ -433,7 +433,7 @@ Partial Class creditos
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(407, 122)
+        Me.Label7.Location = New System.Drawing.Point(418, 120)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 13)
         Me.Label7.TabIndex = 152
@@ -444,7 +444,7 @@ Partial Class creditos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(800, 461)
+        Me.ClientSize = New System.Drawing.Size(851, 501)
         Me.Controls.Add(Me.TXT_CANTIDAD)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.BTN_CANCELAR)
